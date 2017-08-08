@@ -1,0 +1,8 @@
+    	/* 导航切换开始 */
+    	.nav-tab{ margin: 0; padding: 0; display: table; table-layout: fixed; background: #FFF; position: relative;}
+    	.nav-tab:after{ content: ''; height: 1px; background: #c8c7cc; position: absolute; right: 0; bottom: 0; left: 0; -webkit-transform: scaleY(.5); transform: scaleY(.5);}
+    	.nav-tab .nav-item{ list-style: none; display: table-cell; width: 50%; text-align: center; position: relative;  font-size: .9em;}
+    	.nav-tab .nav-item:first-child:after{ content: ''; width: 2px; background: #b2b1b1; position: absolute; top: 11px; bottom: 11px; left: 100%; -webkit-transform: scaleX(.8); transform: scaleX(.8);}
+    	.nav-tab .nav-item a{ color: #525252; display: block; width: 100%; height: 100%;  padding: 11px 15px;}
+    	.nav-tab .nav-item.active a{ color: #3385ff;}
+    	/* 导航切换结束 */

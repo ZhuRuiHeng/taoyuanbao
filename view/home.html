@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>商家</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/popup.css" />
+		<style type="text/css">
+			.mui-bar-nav{box-shadow: none;}
+			.my1{background: url(../public/img/8.jpg)no-repeat;background-size: cover;}
+			.my1 .mui-table-view{background: none;}
+			.my1 .mui-table-view:before,.mui-table-view-cell:after{height: 0px;}
+			.my1 p{color: white;}
+			.font-18{font-size: 18px;}
+			.xt{border-left: 1px solid white;}
+			/*内容*/
+			.my .mui-grid-view.mui-grid-9{background: white;}
+			.my .mui-grid-view.mui-grid-9 i{font-size: 48px;vertical-align: middle;}
+			.my .mui-grid-view.mui-grid-9 .mui-table-view-cell{padding: 20px 10px;}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object{width: 26%;font-size: 48px;}
+			.jd{float:right;font-size: 12px;color: grey;margin-right: 35px;}
+			.mui-checkbox input[type=checkbox], .mui-radio input[type=radio][type=radio]{top: 8px;}
+			.btn{width: 80%;margin: auto;padding-bottom: 15px;}
+			.btn button{padding: 2px;margin-bottom: 0px;border-radius: 20px;background: #FF5252;color: white;}
+			/*弹窗*/
+			.footer{position: fixed;right: 0; left: 0;background-color:#FFFFFF; padding-top: 1.5em;}
+			.footer .mui-grid-view.mui-grid-9{ background-color:#fff;border: none;}
+			.footer .mui-grid-view.mui-grid-9 .mui-table-view-cell{border:none;}
+			.footer .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{font-size: 12px;line-height: 12px;height: 12px;}
+			.footer .mui-btn-block{padding:10px; font-size: 14px; margin: 0;border: none; border-radius: initial;border-top:1px solid #ccc;}
+			.footer .mui-popover-arrow{display: none;}
+			.mui-table-view-cell {
+			    position: relative;
+			    overflow: hidden;
+			    padding: 5px;
+			    -webkit-touch-callout: none;
+			    font-size: 10pt;
+			}
+			em.fudong{
+				font-style:normal;
+				color:red;
+				display: inline-block;
+				padding: 0 0 0 10px;;
+			}
+			.mui-table-view:after{
+				background: none;
+			}
+			.mui-slider-indicator .mui-indicator{
+				margin: 1px 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="my1">
+				<div class="bbs-pulish-img mui-text-center">
+					<p style="padding-top: 20px;">可提现金额</p>
+					<p id="tixian" style="font-size: 30px;line-height: 35px;">0</p> 
+					<ul class="mui-table-view" style="padding-bottom: 10px;">
+						<li class="mui-table-view-cell mui-col-xs-5 mui-pull-left" style="padding-left: 58px;">
+							<p>今日收入</p>
+							<p id="jinri" class="font-18">0</p>
+						</li>
+						<li class="mui-table-view-cell mui-col-xs-2 mui-pull-left">
+							<p style="font-size: 25px;line-height: 40px;">|</p>
+						</li>
+						<li class="mui-table-view-cell mui-col-xs-5" style="padding-right: 58px;">
+							<p>昨日收入</p>
+							<p id="zuori" class="font-18">0</p>
+						</li>
+						
+					</ul>
+					
+				</div>
+				<div style="color:#FAFAFA;font-size: 12px;margin:0px;padding: 5px 20px;">
+					<span id="yongjin_zong_add">当前总佣金:0</span>
+					<span id="renshu_zong_add" style="float:right">在线人数:0</span>
+				</div>
+			</div>
+			<div> 
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<i class="mui-icon iconfont" style="font-size: 17px;color: #F16161;">&#xe620;</i>公告：
+						<marquee id="gonggao" class="mui-scroll">公安部推出身份证网上副本 身份证可"刷"</marquee>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div id="slider" class="mui-slider" >
+					<!--http://shang.qq.com/wpa/qunwpa?idkey=b617ba2130bc03596cca7b73bbf847fd108498110196c9e8979ba4ae53e5dd60-->
+		  	<div class="mui-slider-group mui-slider-loop">
+			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="luobo.html">
+			        <img class='4' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='1' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html" >
+			        <img class='2' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第三张 -->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='3' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第四张 -->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='4' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!--第五张-->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='5' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!--第六张-->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='6' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!--第七张-->
+			    <div class="mui-slider-item">
+			      <a href="luobo.html">
+			        <img class='7' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="taobao.html">
+			        <img class='1' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			  </div>
+		 	<div class="mui-slider-indicator mui-text-right">
+			    <div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+		 	</div>
+				
+			</div>
+			<div class="my">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn jierenwu">
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #5A9EF3;">&#xe60b;</i>
+						<span>浏览任务</span>
+						<p class="mui-ellipsis">有<span id="liulan">0</span>个任务</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn1 jierenwu">
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #F16161;">&#xe606;</i>
+						<span>直通车任务</span>
+						<p class="mui-ellipsis">有<span id="zhitongche">0</span>个任务</p>
+					</li>
+					
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn2 jierenwu">
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #FF8700">&#xe609;</i>
+						<span>淘口令任务</span>
+						<p class="mui-ellipsis">有<span id="taokouling">0</span>个任务</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn3 jierenwu">
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #2DC9BC">&#xe608;</i>
+						<span>聚划算任务</span>
+						<p class="mui-ellipsis">有<span id="juhuasuan">0</span>个任务</p>
+					</li>
+					<!--新增模块-->
+					<!--onclick="openNewPage('fensi-back.html')"-->
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn4 jierenwu" >
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #F16161">&#xe61c;</i>
+						<span>粉丝回访</span>
+						<p class="mui-ellipsis">有<span id="huifang">0</span>个任务</p>
+					</li>
+					<!--onclick="openNewPage('free-use.html')"-->
+					<li class="mui-table-view-cell mui-col-xs-6 mui-media mui-text-left confirmBtn5 jierenwu" >
+						<i class="mui-icon iconfont mui-media-object mui-pull-left" style="color: #2DC9BC">&#xe604;</i>
+						<span>免费试用</span>
+						<p class="mui-ellipsis">有<span id="mianfei">0</span>个任务</p>
+					</li>
+					
+					<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left">
+						<a href="#share" style="padding: 0;">
+							<i class="mui-icon iconfont" style="color: #2DC9BC">&#xe607;</i>
+							<span>分享</span>
+						</a>
+					</li>
+					<!--<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('cash.html')">-->
+					<li id="cash" class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" >	
+						<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe605;</i>
+						<span>提现</span>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('home-task.html')">
+						<i class="mui-icon iconfont" style="color: #F16161;">&#xe60d;</i>
+						<span>任务管理</span><em class="fudong"></em>
+					</li>
+					
+					<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('helps.html')">
+						<i class="mui-icon iconfont" style="color: #F16161;">&#xe60b;</i>
+						<span>帮助中心</span>
+					</li>
+					<!--<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('home-liulan-ing.html')">
+						<i class="mui-icon iconfont" style="color: #F16161;">&#xe6a5;</i>
+						<span>测试复制粘贴跳转淘宝</span><em class="fudong"></em>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('free-use.html')">
+						<i class="mui-icon iconfont" style="color: #2DC9BC">&#xe60c;</i>
+						<span>联系我们</span>
+					</li>-->
+					<!--<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('taobaoapp.html')">
+						<i class="mui-icon iconfont" style="color: #F16161;">&#xe6a5;</i>
+						<span>调用第三方程序</span><em class="fudong"></em>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		
+		<!--弹窗-->
+		<div class="mui-popup mui-popup-in">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<!--<form id="xuanze_tao" class="mui-input-group">-->
+					<form id="" class="mui-input-group xuanze_tao1">	
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons">
+				<div class="mui-col-xs-6 mui-pull-left cancel">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('home-liulan.html')">确定</div>-->
+				<div id='liulan_sure' class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop mui-active"></div>
+		<div class="mui-popup mui-popup-in1">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group xuanze_tao2">
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons1">
+				<div class="mui-col-xs-6 mui-pull-left cancel1">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('home-car.html')">确定</div>-->
+				<div id="zhitongche_sure" class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop1 mui-active"></div>
+		<div class="mui-popup mui-popup-in2">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group xuanze_tao3">
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons2">
+				<div class="mui-col-xs-6 mui-pull-left cancel2">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('home-tao.html')">确定</div>-->
+				<div id="taokouling_sure" class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop2 mui-active"></div>
+		<div class="mui-popup mui-popup-in3">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group xuanze_tao4">
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons3">
+				<div class="mui-col-xs-6 mui-pull-left cancel3">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('home-good.html')">确定</div>-->
+				<div id="juhuasuan_sure" class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop3 mui-active"></div>
+		
+		<!--粉丝回访-->
+		<div class="mui-popup mui-popup-in4">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group xuanze_tao5">
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons4">
+				<div class="mui-col-xs-6 mui-pull-left cancel4">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('fensi-back.html')">确定</div>-->
+				<div id="fensi_sure" class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop4 mui-active"></div>
+		<!--免费试用-->
+		<div class="mui-popup mui-popup-in5">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>选择淘宝账号</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group xuanze_tao6">
+						
+						<div class="btn">
+							<button type="button" class="mui-btn mui-btn-block btn1">绑定新的淘宝账号</button>
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons5">
+				<div class="mui-col-xs-6 mui-pull-left cancel5">取消</div>
+				<!--<div class="mui-col-xs-6 mui-pull-left mui-red" onclick="openNewPage('free-use.html')">确定</div>-->
+				<div id="free_use" class="mui-col-xs-6 mui-pull-left mui-red" >确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop5 mui-active"></div>
+		<!--分享-->
+		<div id="share" class="mui-popover" style="height: 0 !important;">	
+			<div class="footer mui-bar-footer">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+		            <li  data-id="weixin" id="weixin" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #FF8700;">&#xe623;</span>
+		                    <div class="mui-media-body">微信</div>
+		            	</a>
+		            </li>
+		            <li data-id="qq" id="qq" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #F16161;">&#xe622;</span>
+		                    <div class="mui-media-body">QQ</div>
+		            	</a>
+		            </li>
+		            <li data-id="pengyou" id="pengyou" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #5A9EF3;">&#xe624;</span>
+		                    <div class="mui-media-body">朋友圈</div>
+		            	</a>
+		            </li>
+		            <li data-id="kongjian" id="kongjian" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #2DC9BC;">&#xe621;</span>
+		                    <div class="mui-media-body">QQ空间</div>
+		            	</a>
+		            </li>
+ 			   </ul> 
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/home.js" ></script>
+	<script type="text/javascript" src="../js/app/share.js" ></script> 
+	<script>
+		mui.init({ 
+			  swipeBack:true, //启用右滑关闭功能
+			 // preloadPages:[{  
+				  //'url': 'lunbo.html',  
+		           //'id': 'lunbo.html'              
+			 // }]  
+		}); 
+		
+		$(".confirmBtn").on('click', function() {
+			$('.mui-popup-backdrop').css('display','block');
+			$('.mui-popup-in').css('display','block');
+		});
+		document.querySelector(".cancel").addEventListener('click',function(){
+			$('.mui-popup-backdrop').css('display','none');
+			$('.mui-popup-in').css('display','none');
+		});
+		$(".confirmBtn1").on('click', function() {
+			$('.mui-popup-backdrop1').css('display','block');
+			$('.mui-popup-in1').css('display','block');
+		});
+		document.querySelector(".cancel1").addEventListener('click',function(){
+			$('.mui-popup-backdrop1').css('display','none');
+			$('.mui-popup-in1').css('display','none');
+		});
+		$(".confirmBtn2").on('click', function() {
+			$('.mui-popup-backdrop2').css('display','block');
+			$('.mui-popup-in2').css('display','block');
+		});
+		
+		document.querySelector(".cancel2").addEventListener('click',function(){
+			$('.mui-popup-backdrop2').css('display','none');
+			$('.mui-popup-in2').css('display','none');
+		});
+		$(".confirmBtn3").on('click', function() {
+			$('.mui-popup-backdrop3').css('display','block');
+			$('.mui-popup-in3').css('display','block');
+		});
+		document.querySelector(".cancel3").addEventListener('click',function(){
+			$('.mui-popup-backdrop3').css('display','none');
+			$('.mui-popup-in3').css('display','none');
+		});
+		
+		$(".confirmBtn4").on('click', function() {
+			$('.mui-popup-backdrop4').css('display','block');
+			$('.mui-popup-in4').css('display','block');
+		});
+		document.querySelector(".cancel4").addEventListener('click',function(){
+			$('.mui-popup-backdrop4').css('display','none');
+			$('.mui-popup-in4').css('display','none');
+		});
+		
+		$(".confirmBtn5").on('click', function() {
+			$('.mui-popup-backdrop5').css('display','block');
+			$('.mui-popup-in5').css('display','block');
+		});
+		document.querySelector(".cancel5").addEventListener('click',function(){
+			$('.mui-popup-backdrop5').css('display','none');
+			$('.mui-popup-in5').css('display','none');
+		});
+		
+		$(".mui-col-xs-6.mui-pull-left.mui-red").click(function(){
+			$(this).parents(".mui-popup").hide();
+			$(".mui-active").hide();
+		})
+		
+		$('.btn1').click(function(){
+			openNewPage('bangding-taobao.html');
+		})
+		
+		
+		//轮播图3秒自动轮播
+		var slider = mui("#slider");
+	    slider.slider({
+			interval: 3000
+		});
+		  
+        
+		
+	</script>
+		
+</html>

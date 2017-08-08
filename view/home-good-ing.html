@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>浏览任务进行中</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<style type="text/css">
+			.kong{margin-top: 6px;}
+			.mui-btn{padding: 2px 5px;font-size: 14px;float: right;background: #FF5252;color: white;margin-top: -1px;border: 1px solid #FF5252;}
+			.a{line-height: 30px;}
+			.mui-table-view .mui-media-object{max-width: 70px;height: 70px;}
+			.my p{color: #000000;font-size: 17px;line-height: 30px;margin-bottom: 0px;}
+			.my span{margin-left: 10px;}
+			.iconfont{font-size: 64px;color: grey;}
+			.a p{font-size: 12px;}
+			p{color: #000000;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">进行中...</h1>
+		    <a id="quxiao" class="mui-pull-right">
+		    	
+		    </a>
+		</header>
+		<nav class="mui-bar mui-bar-footer">
+			<div class="btn">
+				<button id="tijiaorenwu" class="mui-btn mui-btn-block">提交任务</button>
+			</div>
+		</nav>
+		<div class="mui-content">
+			<div class="kong">
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <!--<img class="mui-media-object mui-pull-left" src="../public/img/11.png">
+				            <div class="mui-media-body">
+					            <p>商品名：优*猫粮</p>
+				                <p class="mui-ellipsis a">店铺名：*它宠物食*</p>
+				                <p>商品价格：¥29.9</p>
+				            </div>-->
+				            <img id="shangp_pic" class="mui-media-object mui-pull-left" src="../public/img/11.png">
+				            <div class="mui-media-body">
+					            <p>商品名：<span id="shangp_minc"></span></p>
+				                <p class="mui-ellipsis a">店铺名：<span id="dianpu_minc" ></span></p>
+				                <p>商品价格：¥<span id="shangp_jiage" ></span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>   
+			</div>
+			<div class="kong">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-ellipsis">
+						<!--如何找到宝贝：淘宝首页加入聚划算-->
+						如何找到宝贝：<span id="find_baobei"></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!--搜索关键词：猫粮<button type="button" class="mui-btn" id="toastBtn">复制关键词</button>-->
+						<!--搜索关键词：<span id="sousuo_guanj" ></span><span style="padding: 2px 5px;border:1px solid #ccc;float: right;">手动复制关键词</span>-->
+					     淘口令：<input id="sousuo_guanj" type="text"  value="" style="width: 55%;margin: 0;font-size:0.7em;padding: 3px 0 !important;height: auto;border: none;"><button type="button" class="mui-btn" id="toastBtn">复制淘口令</button>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						排序方式：<span id="paixufangshi" ></span>
+					</li>
+				</ul>
+			</div>
+			<div class="my">
+				<ul class="mui-table-view">
+					<li id="xuqiu" class="mui-table-view-cell">
+						<p>任务需求：</p>
+						<!--<p>宝贝浏览2分钟：<span>0.2元</span></p>
+						<p>共计：<span>0.2元</span></p>-->
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						发货地区：<span id="fahuo_diqu"></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('img-example1.html')" style="color:#00C6FF;">
+						点击查看截图示例：
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-grid-view a">
+					
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="guanjianci" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">淘口令截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="rudian" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">设置开团提醒</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="dibujietu" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">宝贝底部截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3" id="task_pic_li" >
+						<i data-id="dangqianzhanghao" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">当前账号截图</p>
+					</li>
+					<!--<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="shoucangdianpu_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">收藏店铺截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="shoucangbaobei_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">收藏宝贝截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="guanzhudianpu_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">关注店铺截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="gouwuche_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">加入购物车截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="jinrupingjia_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">进入评价页面</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="bisanjia_pic_one" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">货比三家1</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="bisanjia_pic_two" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">货比三家2</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="bisanjia_pic_three" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">货比三家3</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="youhuiquan_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">领取优惠券</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="liulanfu_one" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">浏览副宝贝1</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="liulanfu_two" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">浏览副宝贝2</p>
+					</li>-->
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!--<span style="font-size: 14px;margin-left: 0px;">当然绑定淘宝账号：********接单后，请及时完成任务，否则任务将30分钟后自动取消，请保持宝贝加入购物车货收藏夹，如期间发现，你将宝贝的收藏或者加入购物车取消，平台将不予发放佣金奖励，并扣除你账号内的0.5元作为处罚（此处为提示语不具备功能</span>-->
+						<span style="font-size: 14px;margin-left: 0px;">当然绑定淘宝账号：<i id="yongh" ></i>接单后，请及时完成任务，请保持宝贝加入购物车货收藏夹，如期间发现，你将宝贝的收藏或者加入购物车取消，平台将不予发放佣金奖励，并扣除你账号内的0.5元作为处罚</span>
+					</li>
+				</ul>
+			</div>
+		</div>	
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/home-good-ing.js" ></script>
+	<script>
+		document.getElementById("toastBtn").addEventListener('tap', function() {
+			mui.toast('请手动复制关键词');
+		});
+		
+	</script>
+</html>

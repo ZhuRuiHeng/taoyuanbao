@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<script src="../js/mui.js"></script>
+		<script src="../js/open.js"></script>
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/public.js"></script>
+		<script src="../js/app/start_page.js"></script>
+		
+		<script>
+		
+		$(function(){		
+			$(".but").click(function(){
+//				alert(231);
+
+				location.href ='login.html';
+			});				
+		})
+	
+	</script>	
+	</head>
+          <style type="text/css">
+          	   body{overflow: hidden !important;background: white !important;margin:0;padding:0}
+				.mui-slider{overflow: hidden;}
+				.but{height: 40px;position:absolute;left:30%;bottom:4%;width:40%;}
+				.mui-slider-group{margin: 0;padding: 0;}
+				.mui-slider-item>img{margin: 0;padding: 0;}
+				.mui-slider .mui-slider-group .mui-slider-item img{display: block; overflow: hidden;max-height: 530px;}
+				.mui-content{height:100% !important;}
+                
+          </style>
+	<body>
+		
+		<div class="mui-content" id="content">
+	    
+	
+    	<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item ">
+					<a href="#">
+						<img src="../img/pp1.png">
+					</a>
+				</div>
+		     <div class="mui-slider-item">
+					<a href="#">
+						<img src="../img/pp2.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a  id="tiyan"  href="#">
+						<img src="../img/pp3.png">
+					</a>
+					<div class="but" ></div>
+					<div class="but"  ></div>
+				</div>
+				</div>
+				<div class="classify" style="clear: both;"></div>
+				</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script>
+			
+			
+			
+		</script>
+	</body>
+
+</html>

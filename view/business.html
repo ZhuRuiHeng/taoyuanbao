@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>商家</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<style type="text/css">
+			.mui-bar-nav{box-shadow: none;}
+			/*轮播图*/
+			.mui-slider-indicator .mui-active.mui-indicator{background:#E3393C;}
+			.mui-slider-indicator .mui-indicator{margin:1px 1px;background: #ffffff;}
+			.mui-slider-indicator{padding-right: 10px;}
+			.mui-slider .mui-slider-group .mui-slider-item img{height: 162px;}
+			/*内容*/
+			.mui-grid-view.mui-grid-9{background: white;}
+			.mui-grid-view.mui-grid-9 i{font-size: 48px;vertical-align: middle;}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell{padding: 20px 15px;}
+			/*弹窗*/
+			.footer{position: fixed;right: 0; left: 0;background-color:#FFFFFF; padding-top: 1.5em;}
+			.footer .mui-grid-view.mui-grid-9{ background-color:#fff;border: none;}
+			.footer .mui-grid-view.mui-grid-9 .mui-table-view-cell{border:none;}
+			.footer .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{font-size: 12px;line-height: 12px;height: 12px;}
+			.footer .mui-btn-block{padding:10px; font-size: 14px; margin: 0;border: none; border-radius: initial;border-top:1px solid #ccc;}
+			.footer .mui-popover-arrow{display: none;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">商家</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" >
+		  	<div class="mui-slider-group mui-slider-loop">
+			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img class='4' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img class='1' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img class='2' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第三张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img class='3' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 第四张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img class='4' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img class='1' src="../public/img/7.jpg">
+			      </a>
+			    </div>
+			  </div>
+		 	<div class="mui-slider-indicator mui-text-right">
+			    <div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+		 	</div>
+		</div>
+		<div>
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('task-read.html')">
+					<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe60b;</i>
+					<span>浏览任务</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('task-car.html')">
+					<i class="mui-icon iconfont" style="color: #F16161;">&#xe606;</i>
+					<span>直通车任务</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('task-tao.html')">
+					<i class="mui-icon iconfont" style="color: #FF8700">&#xe609;</i>
+					<span>淘口令任务</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('task-good.html')">
+					<i class="mui-icon iconfont" style="color: #2DC9BC">&#xe608;</i>
+					<span>聚划算任务</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left">
+					<a href="#share" style="padding: 0;">
+						<i class="mui-icon iconfont" style="color: #2DC9BC">&#xe607;</i>
+						<span>分享</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('cash.html')">
+					<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe605;</i>
+					<span>提现</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('task-admin.html')">
+					<i class="mui-icon iconfont" style="color: #F16161;">&#xe60d;</i>
+					<span>任务管理</span>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-6 mui-ellipsis mui-text-left" onclick="openNewPage('chat-us.html')">
+					<i class="mui-icon iconfont" style="color: #2DC9BC">&#xe60c;</i>
+					<span>联系我们</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--分享-->
+		<div id="share" class="mui-popover" style="height: 0 !important;">	
+			<div class="footer mui-bar-footer">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+		            <li   id="weixin" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #FF8700;">&#xe623;</span>
+		                    <div class="mui-media-body">微信</div>
+		            	</a>
+		            </li>
+		            <li  id="qq" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #F16161;">&#xe622;</span>
+		                    <div class="mui-media-body">QQ</div>
+		            	</a>
+		            </li>
+		            <li  id="pengyou"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #5A9EF3;">&#xe624;</span>
+		                    <div class="mui-media-body">朋友圈</div>
+		            	</a>
+		            </li>
+		            <li  id="kongjian"  class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #2DC9BC;">&#xe621;</span>
+		                    <div class="mui-media-body">QQ空间</div>
+		            	</a>
+		            </li>
+ 			   </ul> 
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/business.js" ></script>
+	<script type="text/javascript" src="../js/app/share.js" ></script> 
+	<script>
+		var gallery = mui('.mui-slider');
+			gallery.slider({
+			interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	</script>
+</html>

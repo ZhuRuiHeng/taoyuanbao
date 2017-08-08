@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/public.js"></script>
+		<script src="../js/app/start_page.js"></script>
+	</head>
+	<style>
+		body{overflow: hidden !important;background: white !important;margin:0;padding:0}
+		.mui-slider{overflow: hidden;}
+		.but{height: 40px;position:absolute;left:30%;bottom:4%;width:40%;}
+		.mui-slider-group{margin: 0;padding: 0;}
+		.mui-slider-item>img{margin: 0;padding: 0;}
+		.mui-slider .mui-slider-group .mui-slider-item img{display: block; overflow: hidden;max-height: 530px;}
+		.mui-content{height:100% !important;}
+		
+	</style>
+	  
+<body>	
+	<div class="mui-content" id="content">
+	    
+	
+    	<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item ">
+					<a href="#">
+						<img src="../img/pp1.png">
+					</a>
+				</div>
+		     <div class="mui-slider-item">
+					<a href="#">
+						<img src="../img/pp2.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a  id="tiyan"  href="#">
+						<img src="../img/pp3.png">
+					</a>
+					<div class="but" onclick="openNewPage('login.html')"></div>
+					<div class="but"  ></div>
+				</div>
+				</div>
+				<div class="classify" style="clear: both;"></div>
+				</div>
+		</div>
+</body>
+
+  <script src="../js/mui.min.js"></script>   
+  <script src="../js/open.js"></script>
+  <script src="../libs/jquery/jquery.js"></script>
+
+  <script>
+	var h=$(window).height()
+	$(".mui-content").css("height",h)
+//	alert(h)
+//      mui.init(); 
+//      mui.plusReady(function(){            
+//          mui.os.ios&&plus.navigator.setFullscreen(true);          
+//          var slider = mui('.mui-slider').slider();            
+//          initPageguid();          
+//          setStatusBarBackgroud();             
+//          plus.navigator.closeSplashscreen(); 
+//          mui("#into")[0].addEventListener('tap', function() {                                 
+//              mui.fire(plus.webview.getLaunchWebview(), 'run'); 
+//              //plus.webview.currentWebview().close();//等登录注册等页面显示之后再关闭                
+//          });  
+//           
+//          function initPageguid(){ 
+//              //绑定滑屏相关事件 
+//              var gallery = mui('.mui-slider')[0]; 
+//              gallery.addEventListener('swiperight', function(e) { 
+//                  //向左划动 
+//                  var num = mui('.mui-slider').slider().getSlideNumber() - 1; 
+//                  setContainerBackg(num); 
+//              }); 
+//              gallery.addEventListener('swipeleft', function(e) { 
+//                  //向右划动 
+//                  var num = mui('.mui-slider').slider().getSlideNumber() + 1; 
+//                  setContainerBackg(num); 
+//              }); 
+//          } 
+//           
+//          function setStatusBarBackgroud () { 
+//              if (mui.os.ios) { 
+//                  plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque"); 
+//                  //提前设置登陆页背景颜色 
+//                  plus.navigator.setStatusBarBackground(""); 
+//              } 
+//          }; 
+//          function setContainerBackg(num) { 
+//              //提前设置背景色 
+//              if (num == 0) { 
+//                  mui('.mui-content')[0].style.backgroundColor = ''; 
+//              } else if (num == 2) { 
+//                  mui('.mui-content')[0].style.backgroundColor = ''; 
+//              } 
+//          }; 
+//      })       
+     
+</script>
+ </html> 

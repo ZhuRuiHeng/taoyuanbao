@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		
+		<title>设置</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.my{margin-top: 15px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">设置</h1>
+		</header>
+		<div class="mui-content">
+			<div class="my">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('about-us.html')">
+						<span>关于我们</span>
+					</li>
+				</ul>
+			</div>
+			<div class="m5">
+				<ul class="mui-table-view">
+					<!--<li class="mui-table-view-cell" onclick="openNewPage('login.html')">-->
+					<li class="mui-table-view-cell" id="logout" >	
+						<span style="color: #FF5252;">退出</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/setting.js" ></script>
+</html>

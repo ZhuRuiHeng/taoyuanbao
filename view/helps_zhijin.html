@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">	
+		<title>帮助中心</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.mui-media-body.big_h{font-size: 17px!important;}
+			.mui-card{margin:0 6px;border:none;border-radius:0px; border-left: 1px solid #FF5252;}
+			.content_matter{color: #8f8f94;font-size: 16px;}
+			.mui-li-color{color: #FF5252;}body{font-size: 16px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">资金提现</h1>
+		</header>
+		<div class="mui-content">
+			<div id="helps" >
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell mui-li-color">兑换相关</li>
+				</ul>
+				<!--折叠面板1-->
+		        <div class="mui-card" id="ajax-content1">
+					<!--<ul class="mui-table-view" >
+						<li class="mui-table-view-cell mui-collapse mui-active">
+							<a class="mui-navigate-right" href="#"></a>
+							<div class="mui-collapse-content">
+								<div class="content_matter">
+									
+								</div>
+							</div>
+						</li>
+					</ul>-->
+				</div> 
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell mui-li-color">提现金额相关</li>
+				</ul>
+				<!--折叠面板2-->
+		        <div class="mui-card" id="ajax-content2">
+					<!--<ul class="mui-table-view" >
+						<li class="mui-table-view-cell mui-collapse mui-active">
+							<a class="mui-navigate-right" href="#"></a>
+							<div class="mui-collapse-content">
+								<div class="content_matter">
+									
+								</div>
+							</div>
+						</li>
+					</ul>-->
+				</div> 
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript">
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		
+		//问答
+        var inform=[
+                    {
+                        "title": "1.任务佣金多少可以兑换？提现比例多少？",
+                        "content":"答：兑换金额只能输入20的整数倍，兑换金额必须小于等于可兑换金额，实际到账金额=兑换金额-手续费1元提现金额=1元RMB"
+                    },
+                    {
+                        "title": "2.佣金可以兑换到哪些账号上？",
+                        "content":"答：佣金可以直接兑换到支付宝的账号上。"
+                    },
+                    {
+                        "title": "3.兑换多久可以到账？",
+                        "content":"答：兑换申请提交后，平台预计在1-2个工作日内完成审核并转账"
+                    },
+                    {
+                        "title": "4.兑换账号可以更换吗？",
+                        "content":"答：兑换帐号可以更换，提现时填入需要兑换的账号即可"
+                    },
+                    {
+                        "title": "5.在那可以看到提现进度？",
+                        "content":"答：右下角→我的→提现记录"
+                    },
+                    {
+                        "title": "1.什么是提现金额？提现金额有什么用处？",
+                        "content":"答：提现金额是做任务获得的佣金，提现金额可以用来兑换。1元提现金额=1元RMB"
+                    },
+                    {
+                        "title": "2.如何获得提现金额",
+                        "content":"答：做任务可获得提现金额。"
+                    }
+              ]
+          var informArr1="";
+          var informArr2="";
+          //1
+          for(var i=0;i<5;i++){
+            var informStr="<ul class=\"mui-table-view\">"+
+							"<li class=\"mui-table-view-cell mui-collapse\">"+
+							"<a class=\"mui-navigate-right\" href=\"#\">"+inform[i].title+"</a>"+
+							"<div class=\"mui-collapse-content\">"+
+							"<div class=\"content_matter\">"+
+							inform[i].content+
+							"</div>"+
+							"</div>"+
+							"</li>"+
+						"</ul>"
+            informArr1+=informStr;
+          }
+          //2
+          for(var i=5;i<inform.length;i++){
+            var informStr="<ul class=\"mui-table-view\">"+
+							"<li class=\"mui-table-view-cell mui-collapse\">"+
+							"<a class=\"mui-navigate-right\" href=\"#\">"+inform[i].title+"</a>"+
+							"<div class=\"mui-collapse-content\">"+
+							"<div class=\"content_matter\">"+
+							inform[i].content+
+							"</div>"+
+							"</div>"+
+							"</li>"+
+						"</ul>"
+            informArr2+=informStr;
+          }
+          //console.log(informArr);
+          document.getElementById("ajax-content1").innerHTML=informArr1;
+          document.getElementById("ajax-content2").innerHTML=informArr2;
+	</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		
+		<title>任务管理</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<style type="text/css">
+			p{margin-top: 10px;}
+			.iconfont{margin-right: 6px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">任务管理</h1>
+		</header>
+		<div class="mui-content">
+			<div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('home-task-no.html')">
+						<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe61c;</i>未完成的任务 ( <span id="weiwan"></span> )
+						<p class="mui-ellipsis">请在领取任务后尽快完成，否则任务将自动取消</p>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('home-task-sh.html')">
+						<i class="mui-icon iconfont" style="color: #F16161;">&#xe61e;</i>待审核的任务 ( <span id="daishen"></span> )
+						<p class="mui-ellipsis">商家将在任务提交后尽快完成审核，否则24小时后...</p>
+					</li>
+				</ul> 
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('home-task-ok.html')">
+						<i class="mui-icon iconfont" style="color: #FF8700;">&#xe618;</i>已审核的任务 ( <span id="yishen"></span> )
+						<p class="mui-ellipsis">佣金已经发放到账户，请注意查收</p>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('home-task-no1.html')">
+						<i class="mui-icon iconfont" style="color: #2DC9BC;">&#xe619;</i>审核不通过的任务 ( <span id="butongguo"></span> )
+						<p class="mui-ellipsis">审核不通过的任务，佣金将不予发放，可申请官方...</p>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('home-task-ok1.html')">
+						<i class="mui-icon iconfont" style="color: #FF5A37;">&#xe61a;</i>官方审核的任务 ( <span id="guanfangshen"></span> )
+						<p class="mui-ellipsis">官方审核为最终裁定，并结束任务</p>
+					</li>
+				</ul>
+				<!--测试 免费试用详情以后删除-->
+				<!--<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('freeuser-inform.html')">
+						<i class="mui-icon iconfont" style="color: #FF5A37;">&#xe61a;</i>测试 免费试用详情( <span id="guanfangshen"></span> )
+						<p class="mui-ellipsis">测试 免费试用详情以后删除</p>
+					</li>
+				</ul>-->
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/home-task.js" ></script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">	
+		<title>帮助中心</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.mui-media-body.big_h{font-size: 17px!important;}
+			.mui-card{margin:0 6px;border:none;border-radius:0px; border-left: 1px solid #FF5252;}
+			.content_matter{color: #8f8f94;font-size: 16px;}
+			.mui-li-color{color: #FF5252;}
+			body{font-size: 16px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">邀请返利</h1>
+		</header>
+		<div class="mui-content">
+			<div id="helps" >
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell mui-li-color">推荐有奖、佣金类问题</li>
+				</ul>
+				<!--折叠面板1-->
+		        <div class="mui-card" id="ajax-content1">
+					<!--<ul class="mui-table-view" >
+						<li class="mui-table-view-cell mui-collapse mui-active">
+							<a class="mui-navigate-right" href="#"></a>
+							<div class="mui-collapse-content">
+								<div class="content_matter">
+									
+								</div>
+							</div>
+						</li>
+					</ul>-->
+				</div> 
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript">
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		
+		//问答
+        var inform=[
+                    {
+                        "title": "1.推荐有奖是什么意思？有什么好处吗",
+                        "content":"答：通过您专属的邀请链接/邀请码去邀请您的朋友加入淘元宝，则被邀请人之后每完成一单任务，邀请人均可获得任务佣金的10%，邀请人数无上限，任务佣金为10%。"
+                    },
+                    {
+                        "title": "2.如何参加邀请有奖？",
+                        "content":"答：在淘元宝-首页界面进入推荐有奖界面，分享邀请链接给好友注册即可"
+                    },
+                    {
+                        "title": "3.分享后怎么样才可以得到奖励？",
+                        "content":"答：通过您专属的邀请链接/邀请码去邀请您的朋友加入淘元宝，则被邀请人之后每完成一单任务，邀请人均可获得任务佣金的10%，邀请人数无上限，任务佣金为10%。"
+                    },
+                    {
+                        "title": "4.推荐有奖得到的奖励以何种方式到我的账号内？",
+                        "content":"答：会发放奖励提现金额到账号内"
+                    },
+                    {
+                        "title": "5.推荐有奖的奖励可以兑换吗？多少可以兑换？",
+                        "content":"答：奖励是可以兑换的，奖励会自动发放到账号内，满20元提现金额即可兑换，兑每月可多次兑换1元提现金额=1元RMB"
+                    },
+                    {
+                        "title": "6.可以自己邀请自己吗？",
+                        "content":"答：不可以的哦，淘元宝规定邀请人不可以邀请自己的哦，否则会被查封账号"
+                    },
+                    {
+                        "title": "7.可以和邀请的好友使用相同的淘宝账号做任务吗？",
+                        "content":"答：不可以的，一个淘宝账号只可以绑定在一个淘元宝账号上的哦"
+                    }
+              ]
+          var informArr1="";
+          var informArr2="";
+          //1
+          for(var i=0;i<inform.length;i++){
+            var informStr="<ul class=\"mui-table-view\">"+
+							"<li class=\"mui-table-view-cell mui-collapse\">"+
+							"<a class=\"mui-navigate-right\" href=\"#\">"+inform[i].title+"</a>"+
+							"<div class=\"mui-collapse-content\">"+
+							"<div class=\"content_matter\">"+
+							inform[i].content+
+							"</div>"+
+							"</div>"+
+							"</li>"+
+						"</ul>"
+            informArr1+=informStr;
+          }
+      
+          //console.log(informArr);
+          document.getElementById("ajax-content1").innerHTML=informArr1;
+         
+	</script>
+</html>

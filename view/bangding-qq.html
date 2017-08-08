@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>实名认证</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.m5 .mui-table-view-cell input{border: none;}
+			.btn{width: 90%;margin: auto;}
+			.btn button{padding: 6px;margin-top: 30px;background: #FF5252;color: white;border: 1px solid #FF5252;}
+			.sr{padding: 2px 0px 0px 15px;height: 44px;}
+			.sr input{width: 72%;padding: 0;}
+			.mui-table-view-cell{padding: 5px 0px;}
+			.mui-bar-nav~.mui-content {padding-top: 60px;}
+			.mui-input-row label{ width: 23%; text-align: left;padding: 11px 0px;}
+			.mui-input-row label~input{ width: 75%; font-size: 1em; padding: 0 15px 0 0;}
+			.yanz-btn{position: absolute; right: 5px; top: 5px;}
+			.yanz-btn button{width: 100% !important; border-radius: 30px; background-color:#FF5252;border: none;color: white;padding: 8px 10px !important;}
+			.res_pasw{padding: 20px 20px; text-align: center; margin-top: 1em;}
+			.res_pasw button{color: white;width: 80%;border-radius: 50px;font-size: 1.2em;background:#FF5252;border: none;}
+			.my .mui-input-row label{width: 100%;font-size: 12px;padding-left: 0px;padding-right: 40px;}
+			/*radio大小*/
+			.mui-checkbox input[type=checkbox]:before{
+				font-size: 18px;
+			}
+			.mui-checkbox input[type=checkbox]{
+				top:8px;
+			}
+			.mui-checkbox input[type=checkbox]:checked:before{
+				color: #FF586C;
+			}	
+			.mui-content li{padding: 0px 10px;}
+			.btn div{padding:20px 0px;text-align: center;}
+			.mui-table-view-cell.sr span{
+				width: 25%;
+    			display: inline-block;
+			}
+		</style>
+	</head>
+	<body onload="createCode()">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
+		    <h1 class="mui-title">实名认证</h1>
+		    <a class="mui-pull-right xiugaishiming" onclick="xiugaishiming()" >
+		    	   <h5 style="line-height: 33px;">修改</h5>
+		    </a>
+		</header>
+		<div class="mui-content">
+			<div class="m5">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						<span>姓名：</span>
+						<input id="name" type="text" placeholder="请输入姓名"/>
+					</li>
+					<li class="mui-table-view-cell sr">
+						<span>身份证：</span>
+						<input id="shenfenzheng" type="text" placeholder="请输入身份证" />
+					</li>
+					<li class="mui-table-view-cell sr">
+						<span>银行卡：</span>
+						<input id="brankcard" type="text" placeholder="请输入银行卡" />
+					</li>
+					<li class="mui-table-view-cell sr">
+						<span>手机号：</span>
+						<input id="phone" type="number" placeholder="请输手机号" />
+					</li>
+					
+				</div>
+				</ul>
+				<div class="mui-table-view" id="yanzhengmano" style="display: inline-block;width: 100%;padding: 0 10px; position: relative;">
+					<div class="mui-table-view-cell">
+						<div class="mui-input-row">
+							<label>验证码：</label>
+							<input id="yanzhengma1" onblur="validate()" type="text" placeholder="请输入验证码"/>
+							<div class="mui-pull-right yanz-btn">
+								<input type="text" value="2344"  onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="height:30px;width:5pc;background:#626262;color:#fff;font-family:Arial;font-style:italic;border:0;padding:2px 3px;letter-spacing:3px;font-weight:bolder;text-align:center;"/><br />
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="mui-table-view" id="send_mms" style="display: inline-block;width: 100%;padding:0 10px; position: relative;">
+					<div class="mui-table-view-cell">
+						<div class="mui-input-row">
+							<label>验证码：</label>
+							<input id="yanzhengma" type="number" placeholder="获取的验证码"/>
+							<div class="mui-pull-right yanz-btn">
+								<button id="yanzheng" type="button" class="mui-btn">获取验证码</button>
+							</div>
+						</div>	
+					</div>
+				</div>
+				
+				<p style="padding: 0 10px; " id="zhuyi">*注意：认证需要一次性支付3元/次的认证审核服务费，此为认证审核服务成本费用，不以认证成功为前提，不支持退款。</p>
+				<p id="zhifu"></p>
+				<div class="my">
+					<div class="mui-input-row mui-checkbox mui-left">
+						<span onclick="openNewPage('server-item.html')"><label style="padding-left:40px ;">我已经阅读并同意相关服务条款和隐私</label></span>
+						<input id="yuedu" name="checkbox" type="checkbox" checked="checked"> 
+					</div>
+				</div>
+			<div class="btn zhifu_pay">
+				<!--<button id="baocunq" class="mui-btn mui-btn-block" onclick="openNewPage('payment.html')">提交</button>-->
+				<button id="baocunq" class="mui-btn mui-btn-block">提交</button>
+				<div id="isshow"></span>
+			</div>
+		</div>	
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/bangding-qq.js" ></script>
+ <script language="javascript" type="text/javascript">  
+
+     var code1 ; //在全局 定义验证码   
+     function createCode(){    
+       code1 = "";   
+       var codeLength = 4;//验证码的长度   
+       var checkCode = document.getElementById("checkCode");   
+       var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','wW','x','y','z');//所有候选组成验证码的字符，当然也可以用中文的   
+
+       for(var i=0;i<codeLength;i++){   
+		   var charIndex = Math.floor(Math.random()*36);   
+	       code1 +=selectChar[charIndex];   
+		}   
+//       alert(code);   
+       if(checkCode) {   
+         checkCode.className="code1";   
+         checkCode.value = code1;   
+       }   
+
+     }   
+
+      function validate (){   
+       var inputCode = document.getElementById("yanzhengma1").value;   
+       if(inputCode.length <=0) {   
+           alert("请输入验证码！");   
+       } else if(inputCode != code1 ){   
+          alert("验证码输入错误！");   
+          createCode();//刷新验证码   
+       }else {   
+         //alert("OK");   
+       }   
+
+   }   
+
+    </script>  
+</html>

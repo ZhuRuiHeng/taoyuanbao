@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">	
+		<title>帮助中心</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.mui-media-body.big_h{font-size: 17px!important;}
+			.mui-card{margin:0 6px;border:none;border-radius:0px; border-left: 1px solid #FF5252;}
+			.content_matter{color: #8f8f94;font-size: 16px;}
+			.mui-li-color{color: #FF5252;}body{font-size: 16px;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">账户管理</h1>
+		</header>
+		<div class="mui-content">
+			<div id="helps" >
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell mui-li-color">注册登录</li>
+				</ul>
+				<!--折叠面板1-->
+		        <div class="mui-card" id="ajax-content1">
+					<!--<ul class="mui-table-view" >
+						<li class="mui-table-view-cell mui-collapse mui-active">
+							<a class="mui-navigate-right" href="#"></a>
+							<div class="mui-collapse-content">
+								<div class="content_matter">
+									
+								</div>
+							</div>
+						</li>
+					</ul>-->
+				</div> 
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell mui-li-color">账号相关</li>
+				</ul>
+				<!--折叠面板2-->
+		        <div class="mui-card" id="ajax-content2">
+					<!--<ul class="mui-table-view" >
+						<li class="mui-table-view-cell mui-collapse mui-active">
+							<a class="mui-navigate-right" href="#"></a>
+							<div class="mui-collapse-content">
+								<div class="content_matter">
+									
+								</div>
+							</div>
+						</li>
+					</ul>-->
+				</div> 
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript">
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		
+		
+		//问答
+        var inform=[
+                    {
+                        "title": "1.注册除了手机号注册，可以用其他方式注册吗？",
+                        "content":"答：暂时只支持手机账户注册，确保买手账号的唯一性哦"
+                    },
+                    {
+                        "title": "2.注册时，进行手机验证，收不到验证码怎么办？",
+                        "content":"答：收不到验证码可能是网络略有延迟，请买手耐心等待。如果60秒后还没收到验证码，请点击“重新发送”获取新的验证码。"
+                    },
+                    {
+                        "title": "1.一个ID可以绑定几个淘宝账号",
+                        "content":"答：收不到验证码可能是网络略有延迟，请买手耐心等待。如果60秒后还没收到验证码，请点击“重新发送”获取新的验证码。"
+                    },
+                    {
+                        "title": "2.绑定做任务的淘宝账号有什么要求吗？",
+                        "content":"答：绑定做任务的淘宝账号需满足注册时间一个月、信誉等级2心以上，实名认证三个条件"
+                    },
+                    {
+                        "title": "3.淘宝账号绑定后可以删除吗？",
+                        "content":"答：淘宝账号绑定后，可以删除哦"
+                    },
+                    {
+                        "title": "4.可以注册多个淘元宝吗？",
+                        "content":"答：不可以的哦，一个人暂时只能注册一个淘元宝账号"
+                    },
+                    {
+                        "title": "5.一个账号可以做多少任务？",
+                        "content":"答：一个淘元宝可绑定5个淘宝账号，每个淘宝账号每天可以做任务数量请查看主页面账号每日可接任务数提示。"
+                    },
+                    {
+                        "title": "6.绑定的账号，多久可以通过审核？",
+                        "content":"答：绑定的淘宝账号需要人工审核，正常1个工作日内完成，只有通过审核的账号才能接手任务。"
+                    }
+              ]
+          var informArr1="";
+          var informArr2="";
+          //1
+          for(var i=0;i<2;i++){
+            var informStr="<ul class=\"mui-table-view\">"+
+							"<li class=\"mui-table-view-cell mui-collapse\">"+
+							"<a class=\"mui-navigate-right\" href=\"#\">"+inform[i].title+"</a>"+
+							"<div class=\"mui-collapse-content\">"+
+							"<div class=\"content_matter\">"+
+							inform[i].content+
+							"</div>"+
+							"</div>"+
+							"</li>"+
+						"</ul>"
+            informArr1+=informStr;
+          }
+          //2
+          for(var i=2;i<inform.length;i++){
+            var informStr="<ul class=\"mui-table-view\">"+
+							"<li class=\"mui-table-view-cell mui-collapse\">"+
+							"<a class=\"mui-navigate-right\" href=\"#\">"+inform[i].title+"</a>"+
+							"<div class=\"mui-collapse-content\">"+
+							"<div class=\"content_matter\">"+
+							inform[i].content+
+							"</div>"+
+							"</div>"+
+							"</li>"+
+						"</ul>"
+            informArr2+=informStr;
+          }
+          //console.log(informArr);
+          document.getElementById("ajax-content1").innerHTML=informArr1;
+          document.getElementById("ajax-content2").innerHTML=informArr2;
+	</script>
+</html>

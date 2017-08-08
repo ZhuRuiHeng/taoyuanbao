@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>我的</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<style type="text/css">
+			.mui-table-view .mui-media-object{max-width: 55px;height: 55px;border-radius: 100%;}
+			.mui-table-view-cell i{font-size: 20px;margin-right: 6px;}
+			/*弹窗*/
+			.alert{position: fixed;top: 50%;left: 50%;height: 150px;width: 200px;margin-left: -100px;margin-top: -75px;z-index: 99;display: none;}
+			.alert .mui-table-view{background: white;border-radius: 5px;}
+			.alert .mui-table-view:before{height: 0;}
+			.alert img{max-width: 75px;height: 55px;}
+			.alert button{margin: 10px 0;padding: 2px 16px;background: #FF5252;color: white;border: 1px solid #FF5252;border-radius: 20px;}
+			.alert-back{position: fixed;top: 0;bottom: 0;left: 0;right: 0;background-color: #000000;opacity: 0.5;display: none;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">我的</h1>
+		</header>
+		<div class="mui-content">
+			<div class="m5">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<!--<img id="touxiang" class="mui-media-object mui-pull-left" src="../public/img/1.jpg" onclick="openNewPage('person-infor.html')" />-->
+						<img id="touxiang" class="mui-media-object mui-pull-left" src="../img/p3.jpg" onclick="openNewPage('person-infor.html')" />
+						<div class="mui-media-body">
+							<!--<span style="line-height: 35px;">沉着的心</span>				
+							<p class="back">13198411056</p>-->
+							<span id="nicheng" style="line-height: 35px;"></span>				
+							<p id="user" class="back"></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="m5">
+				<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" onclick="openNewPage('cash.html')">
+						<i class="mui-icon iconfont" style="color: #FF8700;">&#xe616;</i>可提现现金
+						<!--<span style="float: right;color: #FF5252;">¥20.8</span>-->
+						<span id="money" style="float: right;color: #FF5252;"></span><span style="float: right;color: #FF5252;">¥</span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="openNewPage('cash-list.html')">
+							<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe602;</i>提现记录
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!--<a class="mui-navigate-right" onclick="openNewPage('tuijian-show.html')">-->
+						<a class="mui-navigate-right" id="openurl">
+							<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe608;</i>APP推荐有奖
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="openNewPage('bangding-qq.html')">
+							<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe605;</i>实名认证<span id="shiming" style="color:red;padding: 0 0 0 10px;"></span>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="openNewPage('bangding-taobao.html')">
+							<i class="mui-icon iconfont" style="color: #FF8700;">&#xe614;</i>绑定淘宝账号
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="openNewPage('xiugai-word.html')">
+							<i class="mui-icon iconfont" style="color: #2DC9BC;">&#xe615;</i>修改登录密码
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!--<a class="mui-navigate-right" onclick="openNewPage('xiugai-pay.html')">-->  
+						<a id="xiugai_pay" class="mui-navigate-right" href="#cash">	
+							<i class="mui-icon iconfont" style="color: #F16161;">&#xe612;</i>修改支付密码
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view"> 
+					<li  id="toastBtn"  class="mui-table-view-cell">
+						<i class="mui-icon iconfont" style="color: #5A9EF3;">&#xe617;</i>检测更新
+						<span style="float: right;color: grey;">1.0版本/已是最新版本</span>
+					</li>
+				</ul>
+			</div>
+			<div class="m5">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" onclick="openNewPage('setting.html')">
+							<i class="mui-icon iconfont" style="color: #F16161;">&#xe613;</i>设置
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--<div id="dianji">点击</div>-->
+		<div class="alert" >
+			<div class="mui-table-view">
+				<div class="mui-table-view-cell">
+					<div class="mui-text-center">
+						<img src="../public/img/3.jpg" />
+						<p class="back" style="line-height: 33px;">你还没有设置支付密码</p>
+						<button type="button" class="mui-btn" onclick="openNewPage('setting-pay.html')" >前往设置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alert-back"></div>
+		
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../js/public.js"></script>
+	<script type="text/javascript" src="../js/app/my.js"></script>	
+	<script src="../js/app/update.js"></script>
+	<script>
+		$("#xiugai_pay").click(function(){
+//			$(".alert").show()
+//			$(".alert-back").show()
+		})
+		$(".alert .mui-btn").click(function(){	   
+			$(".alert").hide()
+			$(".alert-back").hide()
+		})
+	</script>
+</html>

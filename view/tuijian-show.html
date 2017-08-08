@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>APP推荐有奖</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/popup.css" />
+<style type="text/css">
+.share{margin: 10px auto;}
+.share a{margin: 0 auto;}
+input:disabled{color:#000;}
+</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		    <h1 class="mui-title">APP推荐有奖</h1>
+		</header>
+		<div class="mui-content">
+			<div class="box">
+        <header>
+            <div class="top">
+                <p style="padding:20px">
+                	 <b>奖励规则</b><br />
+                	 邀请好友成功注册淘元宝，好友每完成一单即可获得10%的佣金分成，注册时填入邀请码可以获得<em class="money">2</em>元提现金额。
+注册时填入您的邀请码将为你的2级好友，2级好友推荐的将成为你的3级好友，以此类推，你的收益将更丰富。
+                	 
+                </p>
+            </div>
+        </header>
+        <section>
+            <ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" style=" padding: 11px 6px;">
+						<i class="mui-icon iconfont" style="color: #FF8700;">&#xe616;</i>邀请链接：<br>
+						<input id="url"  style="float:left;border-radius:1px;border:1px solid;border-color:#FF0000 ;color:#000;width: 66%;padding: 0 3px;" type="text"  value="http://119.23.30.19/api/index.php?m=Home&c=Index&a=share" readonly="readonly"/>
+						<!--<span id="share_address" style="margin: 14px 0 10px 0;float:left;border-radius:1px;border:1px solid;border-color:#FF0000 ;color:#000;width: 66%;padding: 10px 3px;">
+							http://wwww.gdswww.com
+						</span>-->
+						<button type="button" style="background:#FF5252;color:white;margin-top:5px;right:5px;padding: 6px;" class="mui-btn toastBtn"   data-clipboard-target="#url">复制注册链接</button>
+					</li>	
+			</ul>
+			<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" >
+						<a id="xiugai_pay" class="mui-navigate-right" href="#" onclick="xiaji();">	
+							成功推荐1级好友人数<span id="one_num" style="font-size:9pt;float:right;padding-right: 20px;">0人</span>
+						</a>
+					</li>
+			</ul>
+			<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" >
+						<a id="xiugai_pay2" class="mui-navigate-right" href="#" onclick="xiaji2();">
+							成功推荐2级好友人数<span id="two_num" style="font-size:9pt;float:right;padding-right: 20px;">0人</span>
+						</a>
+					</li>
+			</ul>
+			<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" >
+						<a id="xiugai_pay3" class="mui-navigate-right" href="#" onclick="xiaji3();">	
+							成功推荐3级好友人数<span id="three_num" style="font-size:9pt;float:right;padding-right: 20px;">0人</span>
+						</a>
+					</li>
+			</ul>
+			<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" >
+						<a id="xiugai_pay4" class="mui-navigate-right" href="#" onclick="xiaji4();">	
+							总佣金收入<span id="zje" style="font-size:9pt;float:right;padding-right: 20px;">0元</span>
+						</a>
+					</li>
+			</ul>
+			<!--
+			<ul class="mui-table-view"> 
+					<li class="mui-table-view-cell" >
+						<a id="xiugai_pay4" class="mui-navigate-right" href="#" onclick="xiaji4();">	
+							总佣金收入<span id="zje" style="float:right">0元</span>
+						</a>
+					</li>
+			</ul>-->
+			<li class="btn mui-text-center" style="margin: 20px;">
+				<a href="#share" style="padding: 10px 100px;" class="mui-btn mui-btn-success">
+					<span>分享</span>
+				</a>
+			</li>
+        </section>
+    </div>
+	</div>
+	<!--分享-->
+		<div id="share" class="mui-popover" style="height: 0 !important;width:100%;">	
+			<div class="footer mui-bar-footer">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+		            <li  data-id="weixin" id="weixin" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #FF8700;">&#xe623;</span>
+		                    <div class="mui-media-body">微信</div>
+		            	</a>
+		            </li>
+		            <li data-id="qq" id="qq" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #F16161;">&#xe622;</span>
+		                    <div class="mui-media-body">QQ</div>
+		            	</a>
+		            </li>
+		            <li data-id="pengyou" id="pengyou" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #5A9EF3;">&#xe624;</span>
+		                    <div class="mui-media-body">朋友圈</div>
+		            	</a>
+		            </li>
+		            <li data-id="kongjian" id="kongjian" class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 fenxiang">
+		            	<a href="#">
+		                    <span class="mui-icon iconfont" style="color: #2DC9BC;">&#xe621;</span>
+		                    <div class="mui-media-body">QQ空间</div>
+		            	</a>
+		            </li>
+ 			   </ul> 
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/share.js" ></script> 
+	<script type="text/javascript" src="../js/app/tuijian-show.js" ></script> 
+	<script src="../js/clipboard.min.js"></script>
+    <script>
+    	var clipboard = new Clipboard('.toastBtn');
+    	clipboard.on('success', function(e) {
+	        //console.log(1);
+	        mui.toast('已复制成功');
+	    });
+
+	    clipboard.on('error', function(e) {
+	        //console.log(2);
+	        mui.toast('复制失败请长按复制关键词');
+	    });
+	    //选项卡
+	    //1级好友推荐列表
+//		function xiaji(){
+//			openNewPage("tuijian-list.html?uid="+plus.storage.getItem('id'));
+//		}
+		function xiaji(){
+			 mui.openWindow({
+			    url: 'tuijian-list.html', 
+			    id : 'tuijian-list.html',
+			    extras:{
+			        name : '1'
+			        //扩展参数
+			    }
+			 });
+		};
+		function xiaji2(){
+			 mui.openWindow({
+			    url: 'tuijian-list.html', 
+			    id : 'tuijian-list.html',
+			    extras:{
+			        name : '2'
+			        //扩展参数
+			    }
+			 });
+		};
+		function xiaji3(){
+			 mui.openWindow({
+			    url: 'tuijian-list.html', 
+			    id : 'tuijian-list.html',
+			    extras:{
+			        name : '3'
+			    }
+			 });
+		};
+		function xiaji4(){
+			 mui.openWindow({
+			    url: 'tuijian-list.html', 
+			    id : 'tuijian-list.html',
+			    extras:{
+			        name : '1'
+			        //扩展参数
+			    }
+			 });
+		}
+		
+		//2级好友推荐列表
+//		function xiaji2(){
+//			openNewPage("tuijian-list.html?uid="+plus.storage.getItem('id'));
+//		}
+//		//3级好友推荐列表
+//		function xiaji3(){
+//			openNewPage("tuijian-list.html?uid="+plus.storage.getItem('id'));
+//		}
+//		//总佣金收入
+//		function xiaji4(){
+//			openNewPage("tuijian-list.html?uid="+plus.storage.getItem('id'));
+//		}
+
+
+
+
+    </script>
+</html>

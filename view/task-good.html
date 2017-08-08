@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		
+		<title>聚划算任务</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/popup.css" />
+		<style type="text/css">
+			.kong{margin-top: 4px;}
+			.m5 i{font-size: 50px;color: grey;vertical-align: middle;}
+			.m5 input{border: none;}
+			.mui-table-view-radio .mui-table-view-cell .mui-navigate-right:after{color: #FF5252;}
+			.my input{width: 20%;text-align: center;border: none;margin-bottom: 0px;}
+			.my p{color: #000000;font-size: 17px;line-height: 30px;margin-bottom: 0px;}
+			.mui-bar-footer{background: white;}
+			.mui-bar-footer button{background: #FF5252;color: white;}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit]{border: 1px solid #FF5252;background: #FF5252;}
+			.mui-checkbox input[type=checkbox]:checked:before {content: '\e441';}
+			.mui-checkbox input[type=checkbox]:checked:before {color: #e3393c;}
+			.sr{padding: 2px 0px 0px 15px;height: 44px;}
+			.sr input{width: 70%;padding: 0;}
+			/*radio大小*/
+			.mui-checkbox input[type=checkbox]:before{
+				font-size: 20px;
+			}
+			.mui-checkbox input[type=checkbox]{
+				top:10px;right: 6px;
+			}
+				
+			.mui-checkbox input[type=checkbox]:checked:before{content: '\e442';color: #FF586C;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">聚划算任务</h1>
+		</header>
+		<nav class="mui-bar mui-bar-footer">
+			<!--<div class="btn" onclick="openNewPage('notice.html')">-->
+			<div class="btn" >	
+				<button class="mui-btn mui-btn-block">立即发布</button>
+			</div>
+		</nav>
+		<div class="mui-content">
+			<div class="m5">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<span>商品图片：</span><i id="tupian" class="mui-icon iconfont">&#xe61b;</i>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						<span>商品名称：</span>
+						<input type="text" id="shangp_minc" placeholder="请输入商品名称" />
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						<span>店铺名称：</span>
+						<input type="text"  id="dianp_minc" placeholder="请输入店铺名称" />
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						<span>商品价格：</span>
+						<input type="text" id="shangp_jiag" placeholder="请输入商品价格" />
+					</li>
+				</ul>
+				<ul class="mui-table-view kong">
+					<li class="mui-table-view-cell mui-ellipsis sr">
+						<span>如何找到宝贝：</span>
+						<input type="text"  id="find_baob" placeholder="请输入文字描述" />
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-ellipsis sr">
+						<span>淘口令：</span>
+						<input type="text" id="sousuo_guanj" placeholder="请输入淘口令" />
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right confirmBtn">
+							<span>排序方式：</span>
+							<input id="paixufangshi" placeholder="请选择" />
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right confirmBtn1">
+							<span>折扣服务：</span>
+							<input  id="zhekou_fuwu" placeholder="请选择" />
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						<span>发货地区：</span>
+						<input type="text"  id="fahuo_diqu" placeholder="请输入发货地区" />
+					</li>
+				</ul>
+				<ul class="mui-table-view xxx">
+					<li class="mui-table-view-cell mui-checkbox mui-right">
+						过滤24小时内做过我任务的ID
+						<!--<i class="mui-icon iconfont xx" style="font-size: 17px;float: right;color: #FF5252;">&#xe625;</i>-->
+						<input id="yuedu" name="" type="checkbox" checked="checked" /> 
+					</li>
+				</ul>
+				<ul class="mui-table-view aa" id="demo3" data-options='{"value":"2015-10-10 10:10","beginYear":2010,"endYear":2020}'>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<span>任务开始时间：</span>
+							<input id="begin_time" placeholder="请选择" class="ui-alert result" />
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view aaa" id="demo3" data-options='{"value":"2015-10-10 10:10","beginYear":2010,"endYear":2020}'>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<span>任务结束时间：</span>
+							<input id="end_time" placeholder="请选择" class="ui-alert result" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="my">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<p>任务需求：</p>
+						<!--<p>需要任务人数：(<input type="text" id="xuyao_ren" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>加入购物车：(<input type="text" id="gouwuche" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>收藏宝贝：(<input type="text" id="shouc_baob" class="gaibian"  placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>收藏店铺：(<input type="text" id="shouc_dianp" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>关注店铺：(<input type="text" id="guanz_dianp" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>进入评价页面：(<input type="text" id="jinru_pingj" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>货比三家(各1分钟)：(<input type="text" id="huobi_sanj" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>领取优惠券：(<input type="text" id="lingqu_youhq" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>随机浏览副宝贝(各1分钟)：(<input type="text" id="suiji_liul" class="gaibian" placeholder="0" />)人*<span class="xiaoijiage"></span>元</p>
+						<p>主宝贝浏览2分钟+：(<input type="text" id="zhubaob_liul" class="gaibian" placeholder="0" />)分钟*<span class="xiaoijiage"></span></p>
+						<p>平台服务费：<span id="pingt_fwf">0</span>元</p>-->
+                        <p>需要任务人数：(<input type="text" id="xuyao_ren" class="gaibian" placeholder="0" />)人*<span class="rwxq_jia"></span>元</p>
+						<p>加入购物车：(<input type="text" id="gouwuche" class="gaibian" placeholder="0" />)人*<span class="gwc_jia"></span>元</p>
+						<p>收藏宝贝：(<input type="text" id="shouc_baob" class="gaibian"  placeholder="0" />)人*<span class="scbb_jia"></span>元</p>
+						<p>收藏店铺：(<input type="text" id="shouc_dianp" class="gaibian" placeholder="0" />)人*<span class="scdp_jia"></span>元</p>
+						<p>关注店铺：(<input type="text" id="guanz_dianp" class="gaibian" placeholder="0" />)人*<span class="gzdp_jia"></span>元</p>
+						<p>进入评价页面：(<input type="text" id="jinru_pingj" class="gaibian" placeholder="0" />)人*<span class="jrpj_jia"></span>元</p>
+						<p>货比三家(各1分钟)：(<input type="text" id="huobi_sanj" class="gaibian" placeholder="0" />)人*<span class="bsj_jia"></span>元</p>
+						<p>领取优惠券：(<input type="text" id="lingqu_youhq" class="gaibian" placeholder="0" />)人*<span class="yhq_jia"></span>元</p>
+						<p>随机浏览副宝贝(各1分钟)：(<input type="text" id="suiji_liul" class="gaibian" placeholder="0" />)人*<span class="fbb_jia"></span>元</p>
+						<p>主宝贝浏览2分钟+：(<input type="text" id="zhubaob_liul" class="gaibian" placeholder="0" />)分钟*<span class="zbb_jia"></span>元</p>
+						<p>平台服务费：<span id="pingt_fwf">0</span>元</p> 
+						<p>共计：<span id="zongji" style="color: #FF5252;">0</span><span style="color: #FF5252;">元</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mui-popup mui-popup-in">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>排序方式</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group">
+						<div class="mui-input-row mui-radio">
+							<label>综合排序</label>
+							<input id="zonghe" name="radio1" type="radio" value="综合排序" checked>
+						</div>
+						<div class="mui-input-row mui-radio">
+							<label>价格排序</label>
+							<input id="jiage" name="radio1" value="价格排序" type="radio" >
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons">
+				<div class="mui-col-xs-6 mui-pull-left cancel">取消</div>
+				<div id="paixu_sure" class="mui-col-xs-6 mui-pull-left mui-red sure">确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop mui-active"></div>
+		<div class="mui-popup mui-popup-in1">
+			<div class="mui-popup-inner">
+				<div class="mui-popup-title">
+					<h4>折扣服务(多选)</h4>
+				</div>
+				<div class="mui-popup-text">
+					<form class="mui-input-group">
+						<div class="mui-input-row mui-checkbox">
+							<label>包邮</label>
+							<input id="baoyou" name="checkbox" type="checkbox" value="包邮" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>天猫</label>
+							<input id="tianmao" name="checkbox" type="checkbox" value="天猫">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>货到付款</label>
+							<input id="daofu" name="checkbox" type="checkbox" value="货到付款">
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>7天退换货</label>
+							<input id="tuihuan" name="checkbox" type="checkbox" value="7天退换货">
+						</div>
+					</form>
+				</div>     
+			</div>
+			<div class="mui-popup-buttons1">
+				<div class="mui-col-xs-6 mui-pull-left cancel">取消</div>
+				<div id="zhekou_sure" class="mui-col-xs-6 mui-pull-left mui-red sure">确定</div>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop1 mui-active"></div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script src="../js/mui.picker.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/task-good.js" ></script>
+	<script>
+		$(".confirmBtn").on('tap', function() {
+			$('.mui-popup-backdrop').css('display','block');
+			$('.mui-popup-in').css('display','block');
+		});
+		document.querySelector(".mui-popup-buttons").addEventListener('tap',function(){
+			$('.mui-popup-backdrop').css('display','none');
+			$('.mui-popup-in').css('display','none');
+		});
+		
+		///////////////////////////////////////////////////////////////
+		// 排序方式
+		$('#paixu_sure').on('tap',function(){
+			var zonghe = $('#zonghe').val();
+			var jiage = $('#jiage').val();
+			if($('#zonghe').prop("checked")){
+				$('#paixufangshi').val(zonghe);  
+			}else if($('#jiage').prop("checked")){
+				$('#paixufangshi').val(jiage); 
+			}
+		})
+		//  折扣服务
+		 
+		$('#zhekou_sure').on('tap',function(){
+			var fuwu = ""; 
+			$('#zhekou_fuwu').val(fuwu);
+			$("input[name='checkbox'][type='checkbox']:checked").each(function(){
+				fuwu += $(this).val()+ ' ';
+			})
+//			alert(fuwu); 
+			$('#zhekou_fuwu').val(fuwu);  
+		})
+		
+		
+		////////////////////////////////////////////////////////////////
+		
+		$(".confirmBtn1").on('tap', function() {
+			$('.mui-popup-backdrop1').css('display','block');
+			$('.mui-popup-in1').css('display','block');
+		});
+		document.querySelector(".mui-popup-buttons1").addEventListener('tap',function(){
+			$('.mui-popup-backdrop1').css('display','none');
+			$('.mui-popup-in1').css('display','none');
+		});
+			(function($) {
+				$.init();
+				var result = $('.result')[0];
+				var btns = $('.aa');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('aa');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							result.value = rs.text;
+							picker.dispose();
+						});
+					}, false);
+				});
+				var result1 = $('.result')[1];
+				var btns = $('.aaa');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('aaa');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							result1.value = rs.text;
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+			$(".xxx").click(function(){
+				$(".xx").toggle();
+			})
+
+///////////////////////////////////////////////////////////////////////////////////////////			
+			function getNowFormatDate() {
+			    var date = new Date();
+			    var seperator1 = "-";
+			    var seperator2 = ":";
+			    var month = date.getMonth() + 1;
+			    var strDate = date.getDate();
+			    if (month >= 1 && month <= 9) {
+			        month = "0" + month;
+			    }
+			    if (strDate >= 0 && strDate <= 9) {
+			        strDate = "0" + strDate;
+			    }
+			    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+			            + " " + date.getHours() + seperator2 + date.getMinutes();
+//			            + seperator2 + date.getSeconds();
+			    return currentdate;
+			}
+			
+			var shi = getNowFormatDate();
+			
+			$('.aa').attr('data-options','{"value":"'+shi+'","beginYear":2010,"endYear":2020}');
+			$('.aaa').attr('data-options','{"value":"'+shi+'","beginYear":2010,"endYear":2020}');
+
+		</script>
+</html>

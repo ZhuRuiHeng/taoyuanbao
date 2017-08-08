@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>试用商品详情</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<link href="../css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+		<style type="text/css">
+			.kong{margin-top: 6px;}
+			.mui-btn{padding: 2px 5px;font-size: 14px;float: right;background: #FF5252;color: white;margin-top: -1px;border: 1px solid #FF5252;}
+			.a{line-height: 30px;}
+			.mui-table-view .mui-media-object{max-width: 70px;height: 70px;}
+			.my p{color: #000000;font-size: 17px;line-height: 30px;margin-bottom: 0px;}
+			.my span{margin-left: 10px;}
+			.iconfont{font-size: 64px;color: grey;}
+			.a p{font-size: 12px;}
+			p{color: #000000;}
+			.mui-segmented-control .mui-control-item{color: #000;border-left: 1px solid #000;    line-height: 22px;
+    font-size: 13px;white-space:inherit;text-overflow:inherit;}
+    .xiaoshi.mui-table-view:after,.xiaoshi.mui-table-view:before,.dibu.mui-table-view:after{background-color:#fff}
+    .mui-segmented-control .mui-control-item.mui-active {color: #8f8f94;background-color: #fff;}
+    
+		</style>
+	
+	</head>
+	<body id="body">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">试用商品详情</h1>
+		    <a id="quxiao" class="mui-pull-right">
+		    	<h5 id="" style="line-height: 33px;">取消任务</h5>
+		    </a>
+		</header>
+		<nav class="mui-bar mui-bar-footer">
+			<div class="btn">
+				<button id="tijiaorenwu" class="mui-btn mui-btn-block">提交任务</button>
+			</div>
+		</nav>
+		<div class="mui-content" style="margin-bottom: 40px;">
+			<!--图片-->
+			<div class="mui-card xiugaim" style="margin: 0;border-radius: 0;">
+				<div class="mui-card-content">
+					<img src="../img/cbd.jpg" alt="" width="100%" id="shangp_pic">
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<p style="color: #333;padding:0 10px;;">商品：
+							<span id="shangp_minc">G2000衬衫男长袖防皱商务男装 休闲正装衣服修身方领白色上班衬衣</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="kong" style="margin-top:0;">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						商品价格：<span id="shangp_jiage"></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						试用型号：<span id="shangp_xinghao"></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						是否包邮：<span id="shangpin_baoyou"></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						店铺名：<span id="dianpu_minc" ></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						试用商家联系QQ：<span id="shangjia_qq" ></span>
+					</li>
+				</ul>
+				<!--流程步骤-->
+				<div>
+					<div id="segmentedControl" class="mui-segmented-control" style="padding: 6px 0;background-color:#fff;border-radius:0;border: 1px solid #000;">
+						<a class="mui-control-item" href="javascript:;">
+							1.到指定平台购买商品
+						</a>
+						<a class="mui-control-item" href="javascript:;">
+							2.提交订单号
+						</a>
+						<a class="mui-control-item" href="javascript:;">
+							3.提交试用报告和截图
+						</a>
+						<a class="mui-control-item " href="javascript:;">
+							4.报告审核通过返回购物金
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="my">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						指定商城：<span id="shangpin_shangcheng" ></span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						搜索关键词：<input id="sousuoci1" type="text" value="" style="width: 30%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" readonly="readonly">
+							<button class="mui-btn opentaobao" id="soushu1" data-clipboard-target="#sousuoci1" >复制关键词</button>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!--搜索关键词：<input id="sousuo_guanj" type="text"  value="居然" style="width: 30%;margin: 0;padding: 3px 0 !important;height: auto;border: none;"><span style="padding: 2px 5px;border:1px solid #ccc;float: right;">手动复制关键词</span>-->
+					        自选关键词：<input id="sousuoci2" type="text" value="" style="width: 30%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" readonly="readonly">
+					        	<button class="mui-btn opentaobao" id="soushu2" data-clipboard-target="#sousuoci2">复制关键词</button>
+					</li>
+				</ul>
+				<!--温馨提示-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<p>温馨提示：</p>
+						<span id="tishi1" style="font-size: 14px;margin-left: 0px;">接单后，请及时完成任务，放佣金奖励，并扣除你账号内的0.5元作为处罚</span><br>
+						<span id="tishi2" style="font-size: 14px;margin-left: 0px;">接单后，请及时完成任务，放佣金奖励，并扣除你账号内的0.5元作为处罚</span><br>
+						<span id="tishi3" style="font-size: 14px;margin-left: 0px;">接单后，请及时完成任务，放佣金奖励，并扣除你账号内的0.5元作为处罚</span>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" onclick="openNewPage('img-example1.html')" style="color:#00C6FF;">
+						如何复制商品链接？
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						核实商品链接：<input id="shangpin_linajie" type="text" value="" style="width: 30%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" placeholder="请粘贴商品分享链接"><button type="button" class="mui-btn" id="yanzheng">点击验证链接</button>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						商品订单号：<input id="shangpin_dingdan" type="text" value="" style="width: 30%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" placeholder="请输入订单号">
+					</li>
+				</ul>
+				<!--订单号-->
+				<ul class="mui-table-view dibu">
+					<li class="mui-table-view-cell" onclick="openNewPage('img-example1.html')" style="color:#00C6FF;">
+						点击查看截图示例：
+						
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-grid-view a xiaoshi">
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="dingdan_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">订单截图</p>
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="rudian_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">入店截图</p>
+					</li>
+				</ul>
+				<button type="button" class="mui-btn" id="tijiaodingdan" style=" margin:16px auto;display:block;padding:6px;float:none;">提交订单号</button>
+				<!--试用报告-->
+				<ul class="mui-table-view dibu">
+					<li class="mui-table-view-cell" >
+						试用报告问答卷
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					 <li class="mui-table-view-cell" id="">问题：<input id="wenti" type="text" value="" style="width:76%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" readonly="readonly"></li>
+			         <li class="mui-table-view-cell" >答案：<input id="daan" type="text" value="" style="width: 76%;margin: 0;padding: 3px 0 !important;height: auto;border: none;" readonly="readonly"></li>
+				</ul>
+				<ul class="mui-table-view mui-grid-view a xiaoshi">
+					<li class="mui-table-view-cell mui-col-xs-3">
+						<i data-id="wenda" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">上传问答评价截图</p>
+					</li>
+				</ul>
+				<button type="button" class="mui-btn" id="tijiaobaogao" style=" margin:16px auto;display:block;padding:6px;float:none;">提交试用报告</button>
+			</div>
+		</div>	
+		
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/app/freeuser-inform.js" ></script>
+	<script src="../js/jquery.imgbox.pack.js"></script>
+	<!--复制粘贴-->
+	<script src="../js/clipboard.min.js"></script>
+  
+
+	  
+	<script>
+	$(function(){
+		$("#example1").imgbox({
+		'speedIn'		: 0,
+		'speedOut'		: 0,
+		'alignment'		: 'center',
+		'overlayShow'	: true,
+		'allowMultiple'	: false
+	  });
+	});
+//	document.getElementById("toastBtn").addEventListener('tap', function() {
+//			mui.toast('请手动复制关键词');
+//	});	
+	mui.init({
+		swipeBack: true //启用右滑关闭功能
+	});
+	
+	</script>
+</html>

@@ -1,0 +1,3528 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "H584E8563",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "淘元寳",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0",/*应用版本名称*/
+		"code": ""
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "view/login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": ""
+	},
+	"permissions": {
+		"Accelerometer": {
+			"description": "访问加速度感应器"
+		},
+		"Audio": {
+			"description": "访问麦克风"
+		},
+		"Messaging": {
+			"description": "短彩邮件插件"
+		},
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+		"Camera": {
+			"description": "访问摄像头"
+		},
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+		"Contacts": {
+			"description": "访问系统联系人信息"
+		},
+		"Device": {
+			"description": "访问设备信息"
+		},
+		"Downloader": {
+			"description": "文件下载管理"
+		},
+		"Events": {
+			"description": "应用扩展事件"
+		},
+		"File": {
+			"description": "访问本地文件系统"
+		},
+		"Gallery": {
+			"description": "访问系统相册"
+		},
+		"Geolocation": {
+			"description": "访问位置信息"
+		},
+		"Invocation": {
+			"description": "使用Native.js能力"
+		},
+		"Orientation": {
+			"description": "访问方向感应器"
+		},
+		"Proximity": {
+			"description": "访问距离感应器"
+		},
+		"Storage": {
+			"description": "管理应用本地数据"
+		},
+
+		"Uploader": {
+			"description": "管理文件上传任务"
+		},
+		"Runtime": {
+			"description": "访问运行期环境"
+		},
+		"XMLHttpRequest": {
+			"description": "跨域网络访问"
+		},
+		"Zip": {
+			"description": "文件压缩与解压缩"
+		},
+		"Barcode": {
+			"description": "管理二维码扫描插件"
+		},
+
+
+		"Webview": {
+			"description": "窗口管理"
+		},
+		"NativeUI": {
+			"description": "原生UI控件"
+		},
+		"Navigator": {
+			"description": "浏览器信息"
+		},
+		"NativeObj": {
+			"description": "原生对象"
+		},
+		"Share": {},
+
+
+
+		"Speech": {},
+		"Payment": {},
+		
+		"OAuth": {
+			"description":"登录授权"
+		}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true,
+			"delay": "0"
+		},
+		"popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+		"runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"plugins": {
+				"oauth": {
+					"weixin": {
+						"appid": "wx0dbdfdf192d2ab02",
+						"appsecret": "bc4462fa37bd1591f2c7b96d28c7ee90"
+					},
+					"qq": {
+						"appid": "1105773628"
+					}
+				},
+				"payment": {
+
+					"alipay": {
+						"description": "阿里支付",
+						"scheme": ""
+					}
+				},
+				"maps": {},
+				"share": {
+					"qq": {
+						"appid": "1105773628",
+						"description": "QQ分享"
+					},
+					"weixin": {
+						"appid": "wx0dbdfdf192d2ab02",
+						"appsecret": "bc4462fa37bd1591f2c7b96d28c7ee90",
+						"description": "可选，微信分享"
+					}
+				}
+			},
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": [],
+				"urlschemewhitelist": [
+					"taobao"
+				]
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.CLEAR_APP_CACHE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.CALL_PRIVILEGED\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.CLEAR_APP_USER_DATA\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.SET_TIME_ZONE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.CAPTURE_AUDIO_OUTPUT\"/>","<uses-permission android:name=\"android.permission.SET_TIME\"/>","<uses-permission android:name=\"android.permission.WRITE_SMS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
+			},
+			"orientation": [
+				"portrait-primary",
+				"portrait-secondary"
+			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png", /*iPhone3/3GS程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png", /*iPhone4程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png", /*iPhone4S/5/6程序图标，分辨率：120x120*/
+						"retina8": "unpackage/res/icons/180x180.png", /*iPhone6 Plus程序图标，分辨率：180x180*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png", /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone4设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png", /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+						"settings-retina8": "unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png",
+					"xxxhdpi": "unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "/Users/Holiy/Desktop/AB1659E796C61F25F9ED7E5521F10B9A.png"
+					},
+					"ipad": {
+						 /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "/Users/Holiy/Desktop/AB1659E796C61F25F9ED7E5521F10B9A.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						 /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "/Users/Holiy/Desktop/AB1659E796C61F25F9ED7E5521F10B9A.png"
+					}
+				},
+				"android": {
+					"mdpi": "/Users/Holiy/Desktop/AB1659E796C61F25F9ED7E5521F10B9A.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "/Users/Holiy/Desktop/AB1659E796C61F25F9ED7E5521F10B9A.png"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"app/personal.html": {
+				"resources": [
+					"app/images/defaultPic.png",
+					"fonts/mui.ttf",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"app/finish-list.html": {
+				"resources": [
+					"app/images/finished.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"index.html": {
+				"resources": [
+					"css/main.css",
+					"css/iconfont.css",
+					"js/public.js",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/mui.js",
+					"app/underway-list.html",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [
+					"app/personal.html",
+					"app/finish-list.html"
+				],
+				"priority": 0
+			},
+			"app/underway-list.html": {
+				"resources": [
+					"app/images/receive.png",
+					"js/mui.min.js",
+					"app/images/waiting.png",
+					"app/images/delivery.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"app/login.html": {
+				"resources": [
+					"css/main.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"js/public.js",
+					"css/mui.min.css",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"view/login.html": {
+				"resources": [
+					"css/main.css",
+					"js/public.js",
+					"js/angular.js",
+					"js/mui.js",
+					"js/config.js",
+					"js/jquery.js",
+					"js/function.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.css",
+					"libs/mui/mui.js",
+					"libs/mui/mui.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/angular/angular.js",
+					"libs/jquery/jquery.js",
+					"css/login.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"public/img/14.png",
+					"public/img/login.jpg",
+					"public/img/2.jpg",
+					"js/app/login.js"
+				],
+				"refer": [
+					"view/regist.html",
+					"view/password.html",
+					"view/index.html"
+				],
+				"priority": 0
+			},
+			"view/index.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"libs/mui/mui.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/mui.css",
+					"js/function.js",
+					"libs/jquery/jquery.js",
+					"view/underway-list.html",
+					"libs/ui/subview/subview.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"js/public.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"public/img/2.png",
+					"libs/iconfont/fonts/iconfont.svg",
+					"js/open.js",
+					"js/config.js",
+					"view/Home.html",
+					"js/mui.min.js",
+					"js/mui.js",
+					"css/chat.css",
+					"view/infor.html",
+					"view/home.html",
+					"view/my.html",
+					"view/active.html",
+					"view/car.html",
+					"js/app/index.js"
+				],
+				"refer": [
+					"view/finish-list.html",
+					"view/personal.html",
+					"view/exclusive.html",
+					"view/message.html",
+					"view/needs-hall.html",
+					"view/fire.html",
+					"view/found.html",
+					"view/shequ.html",
+					"view/person.html",
+					"view/class.html",
+					"view/shopping-car.html",
+					"view/room.html",
+					"view/post.html",
+					"view/road.html",
+					"view/cash-details.html",
+					"view/business.html",
+					"view/tuijian-show.html"
+				],
+				"priority": 0
+			},
+			"view/finish-list.html": {
+				"resources": [
+					"js/public.js",
+					"libs/mui/mui.js",
+					"css/main.css",
+					"js/function.js",
+					"libs/jquery/jquery.js",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/mui.css",
+					"css/finish-list.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/underway-list.html": {
+				"resources": [
+					"css/main.css",
+					"js/public.js",
+					"js/function.js",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.js",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/personal.html": {
+				"resources": [
+					"js/public.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/index.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/public.js",
+					"libs/jquery/jquery.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/ui/subview.js",
+					"libs/mui/mui.css",
+					"js/function.js",
+					"test/list1.html"
+				],
+				"refer": [
+					"test/list2.html"
+				],
+				"priority": 0
+			},
+			"test/list2.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/public.js",
+					"js/function.js",
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/list1.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/public.js",
+					"js/function.js",
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/tableview.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"css/main.css",
+					"libs/ui/subview/subview.js",
+					"js/public.js",
+					"libs/mui/fonts/mui.ttf",
+					"test/list1.html",
+					"js/config.js",
+					"js/function.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"test/list2.html",
+					"test/list4.html",
+					"test/list3.html"
+				],
+				"priority": 0
+			},
+			"test/list3.html": {
+				"resources": [
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/list4.html": {
+				"resources": [
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.js",
+					"js/public.js",
+					"js/function.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/gallery.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/mem.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/map.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"libs/mui/mui.css",
+					"libs/jquery/jquery.js",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test/storage.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"css/main.css",
+					"libs/mui/mui.css",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/Home.html": {
+				"resources": [
+					"js/open.js",
+					"libs/ui/subview/subview.js",
+					"public/img/3.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"libs/mui/mui.js",
+					"css/main.css",
+					"js/public.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/jquery/jquery.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/mui.css",
+					"js/function.js",
+					"css/app.css",
+					"public/img/2.png",
+					"js/mui.min.js",
+					"js/mui.js",
+					"view/jiazheng.html"
+				],
+				"refer": [
+					"view/Video_details.html",
+					"view/sousuo.html",
+					"view/details.html"
+				],
+				"priority": 0
+			},
+			"view/exclusive.html": {
+				"resources": [
+					"js/open.js",
+					"public/img/3.png",
+					"public/img/1.png",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/jquery/jquery.js",
+					"js/function.js",
+					"libs/mui/mui.css",
+					"libs/iconfont/fonts/iconfont.woff"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/Video_details.html": {
+				"resources": [
+					"public/img/4.png",
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/function.js",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/message.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"public/img/18.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"css/main.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css",
+					"public/img/1.png",
+					"public/img/1.jpg",
+					"js/mui.min.js",
+					"js/jquery-2.1.4.min.js",
+					"public/img/20.jpg"
+				],
+				"refer": [
+					"view/Chat.html"
+				],
+				"priority": 0
+			},
+			"view/needs-hall.html": {
+				"resources": [
+					"public/img/1.png",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [
+					"view/needs-details.html"
+				],
+				"priority": 0
+			},
+			"view/my.html": {
+				"resources": [
+					"libs/mui/fonts/mui.ttf",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css",
+					"public/img/1-1.jpg",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"public/img/1.jpg",
+					"libs/iconfont/iconfont.css",
+					"js/open.js",
+					"js/mui.js",
+					"js/app/update.js",
+					"public/img/3.jpg",
+					"js/app/my.js",
+					"img/p3.jpg"
+				],
+				"refer": [
+					"view/intorduce.html",
+					"view/addr.html",
+					"view/help.html",
+					"view/my-chaoren.html",
+					"view/my-guzhu.html",
+					"view/my-yuer.html",
+					"view/setting.html",
+					"view/my-rb.html",
+					"view/login.html",
+					"view/use.html",
+					"view/my-friend.html",
+					"view/share.html",
+					"view/person-infor.html",
+					"view/money.html",
+					"view/online-kefu.html",
+					"view/my-room.html",
+					"view/little-note.html",
+					"view/car-ok.html",
+					"view/after-sale.html",
+					"view/my-infor.html",
+					"view/my-active.html",
+					"view/my-red.html",
+					"view/rank.html",
+					"view/my-setting.html",
+					"view/bangding-taobao.html",
+					"view/xiugai-word.html",
+					"view/bangding-qq.html",
+					"view/xiugai-pay.html"
+				],
+				"priority": 0
+			},
+			"view/intorduce.html": {
+				"resources": [
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/addr.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/help.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/problem.html"
+				],
+				"priority": 0
+			},
+			"view/my-chaoren.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css",
+					"js/open.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/chat.css"
+				],
+				"refer": [
+					"view/pro-admin.html",
+					"view/order.html",
+					"view/chaoren.html",
+					"view/holiday.html",
+					"view/evaluate.html"
+				],
+				"priority": 0
+			},
+			"view/pro-admin.html": {
+				"resources": [
+					"css/main.css",
+					"css/app.css",
+					"js/mui.min.2.js",
+					"css/mui.min.css",
+					"libs/mui/mui.css",
+					"js/open.js",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [
+					"view/add.html"
+				],
+				"priority": 0
+			},
+			"view/my-intro.html": {
+				"resources": [
+					"css/main.css",
+					"public/img/1.png",
+					"js/open.js",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/release-needs.html"
+				],
+				"priority": 0
+			},
+			"view/my-guzhu.html": {
+				"resources": [
+					"js/open.js",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/chat.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/my-intro.html",
+					"view/num1.html",
+					"view/order1.html",
+					"view/all-service.html",
+					"view/num.html"
+				],
+				"priority": 0
+			},
+			"view/Chat.html": {
+				"resources": [
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"js/mui.js",
+					"css/chat.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/needs-details.html": {
+				"resources": [
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"libs/mui/mui.css",
+					"css/popup.css",
+					"libs/mui/mui.js",
+					"js/open.js",
+					"libs/jquery/jquery.js",
+					"css/chat.css",
+					"js/mui.js"
+				],
+				"refer": [
+					"view/Chat.html"
+				],
+				"priority": 0
+			},
+			"view/jiazheng.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/details.html"
+				],
+				"priority": 0
+			},
+			"view/sousuo.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css",
+					"public/img/1-2.jpg",
+					"libs/iconfont/fonts/iconfont.woff",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/details.html": {
+				"resources": [
+					"public/img/7.png",
+					"libs/mui/mui.js",
+					"public/img/5.png",
+					"public/img/6.png",
+					"css/popup.css",
+					"libs/jquery/jquery.js",
+					"css/chat.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/Chat.html"
+				],
+				"priority": 0
+			},
+			"view/order.html": {
+				"resources": [
+					"css/popup.css",
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/order-details.html"
+				],
+				"priority": 0
+			},
+			"view/about.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/8.png",
+					"libs/mui/mui.css",
+					"libs/mui/mui.js",
+					"css/personal.css",
+					"public/img/14.png",
+					"js/function.js",
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/setting.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"js/app/setting.js"
+				],
+				"refer": [
+					"view/fuwu.html",
+					"view/about.html",
+					"view/password2.html",
+					"view/password1.html",
+					"view/login.html",
+					"view/about-us.html"
+				],
+				"priority": 0
+			},
+			"view/num1.html": {
+				"resources": [
+					"public/img/17.png",
+					"public/img/18.png",
+					"css/main.css",
+					"public/img/19.png",
+					"public/img/20.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/order4-details.html": {
+				"resources": [
+					"libs/mui/mui.js"
+				],
+				"refer": [
+					"view/Chat.html"
+				],
+				"priority": 0
+			},
+			"view/order1.html": {
+				"resources": [
+					"css/main.css",
+					"css/popup.css",
+					"libs/jquery/jquery.js",
+					"js/open.js",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/order4-details.html",
+					"view/order2-details.html"
+				],
+				"priority": 0
+			},
+			"view/chaoren.html": {
+				"resources": [
+					"public/img/12.png",
+					"css/main.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/release-needs.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/all-service.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/service-details2.html",
+					"view/service-details3.html",
+					"view/service-details1.html"
+				],
+				"priority": 0
+			},
+			"view/my-yuer.html": {
+				"resources": [
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/chat.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/recharge.html",
+					"view/cash.html",
+					"view/set-mima.html",
+					"view/bangding.html",
+					"view/bill.html"
+				],
+				"priority": 0
+			},
+			"view/recharge.html": {
+				"resources": [
+					"css/main.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-rb.html": {
+				"resources": [
+					"js/open.js",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/chat.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/cash.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.jpg",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/order2-details.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/rate.html"
+				],
+				"priority": 0
+			},
+			"view/num.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/15.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/13.png",
+					"js/mui.js",
+					"public/img/16.png",
+					"public/img/14.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/service-details2.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/service-details3.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/service-details1.html": {
+				"resources": [
+					"public/img/11.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/add.html": {
+				"resources": [
+					"public/img/9.png",
+					"js/mui.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/holiday.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/evaluate.html": {
+				"resources": [
+					"public/img/7.png",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/problem.html": {
+				"resources": [
+					"public/img/9.png",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/set-mima.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/bangding.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/bill.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/fire.html": {
+				"resources": [
+					"public/img/9.png",
+					"public/img/3.png",
+					"public/img/4.png",
+					"css/main.css",
+					"js/open.js",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/start-fire.html",
+					"view/game3.html",
+					"view/game4.html",
+					"view/game-over.html",
+					"view/game.html"
+				],
+				"priority": 0
+			},
+			"view/found.html": {
+				"resources": [
+					"public/img/5.png",
+					"public/img/3.png",
+					"css/popup.css",
+					"public/img/4.png",
+					"css/main.css",
+					"js/mui.min.js",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css",
+					"public/img/21.jpg",
+					"public/img/22.jpg",
+					"public/img/25.jpg",
+					"public/img/26.jpg",
+					"public/img/24.jpg",
+					"public/img/23.jpg",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [
+					"view/team.html",
+					"view/player.html",
+					"view/team0.html",
+					"view/team2.html",
+					"view/nearby.html",
+					"view/shopping.html",
+					"view/club.html",
+					"view/exchange-zone.html",
+					"view/stars-coash.html",
+					"view/activity.html",
+					"view/found-sousuo.html"
+				],
+				"priority": 0
+			},
+			"view/shequ.html": {
+				"resources": [
+					"public/img/7.png",
+					"css/main.css",
+					"public/img/6.png",
+					"js/open.js",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/intro.html",
+					"view/shequ1.html"
+				],
+				"priority": 0
+			},
+			"view/person.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"public/img/images/15_02.png",
+					"public/img/6.png",
+					"css/main.css",
+					"public/img/1.png",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/person1.html",
+					"view/game.html",
+					"view/my-team.html",
+					"view/my-message.html",
+					"view/my-keep.html",
+					"view/my-active.html",
+					"view/ploblem.html",
+					"view/about.html",
+					"view/login.html",
+					"view/money.html",
+					"view/order.html",
+					"view/my-touzi.html",
+					"view/setting.html",
+					"view/share.html"
+				],
+				"priority": 0
+			},
+			"view/infor.html": {
+				"resources": [
+					"public/img/11.png",
+					"public/img/10.png",
+					"css/main.css"
+				],
+				"refer": [
+					"view/text.html",
+					"view/facts-news.html",
+					"view/active-infor.html"
+				],
+				"priority": 0
+			},
+			"view/text.html": {
+				"resources": [
+					"public/img/12.png",
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/team.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"public/img/5.png",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/2.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/player.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/start-fire.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/mui.picker.min.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/game3.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/16.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/game4.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/16.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/game-over.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/16.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/intro.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/8.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/shequ1.html": {
+				"resources": [
+					"public/img/7.png",
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/6.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/person1.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"public/img/6.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/person2.html"
+				],
+				"priority": 0
+			},
+			"view/game.html": {
+				"resources": [
+					"public/img/9.png",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/16.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-team.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"public/img/images/15_02.png",
+					"public/img/6.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"public/img/2.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/player2.html",
+					"view/school.html"
+				],
+				"priority": 0
+			},
+			"view/my-message.html": {
+				"resources": [
+					"public/img/7.png",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"libs/mui/mui.css",
+					"css/app.css",
+					"js/mui.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-keep.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/5.png",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"public/img/4.png",
+					"libs/mui/mui.css",
+					"css/app.css",
+					"css/mui.min.css",
+					"js/mui.min1.js",
+					"libs/mui/mui.js",
+					"libs/jquery/jquery.js",
+					"css/popup.css",
+					"css/chat.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js"
+				],
+				"refer": [
+					"view/team0.html"
+				],
+				"priority": 0
+			},
+			"view/my-active.html": {
+				"resources": [
+					"public/img/7.png",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/6.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css",
+					"public/img/1.jpg",
+					"js/jquery-2.1.4.min.js",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"libs/iconfont/iconfont.css",
+					"public/img/9.jpg",
+					"public/img/6.jpg",
+					"public/img/8.jpg",
+					"js/mui.js",
+					"public/img/7.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/ploblem.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/regist.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/password.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/player2.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"css/popup.css",
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/person2.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"css/app.css",
+					"js/mui.poppicker.js",
+					"public/img/15.png",
+					"css/mui.poppicker.css",
+					"css/mui.picker.css",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/person3.html"
+				],
+				"priority": 0
+			},
+			"view/person3.html": {
+				"resources": [],
+				"refer": [
+					"view/person4.html"
+				],
+				"priority": 0
+			},
+			"view/facts-news.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/active-infor.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/team0.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"public/img/5.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/4.png",
+					"public/img/2.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/team2.html": {
+				"resources": [
+					"libs/mui/fonts/mui.ttf",
+					"public/img/2.png",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"public/img/5.png",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/home.html": {
+				"resources": [
+					"public/img/35.png",
+					"public/img/l-2.png",
+					"public/img/34.png",
+					"public/img/l-1.png",
+					"public/img/38.png",
+					"public/img/l-3.png",
+					"public/img/3-1.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/37.png",
+					"public/img/36.png",
+					"css/main.css",
+					"public/img/33.png",
+					"public/img/2.jpg",
+					"public/img/1-3.jpg",
+					"css/popup.css",
+					"public/img/8.jpg",
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/mui.js",
+					"libs/mui/mui.css",
+					"js/app/home.js",
+					"js/public.js",
+					"js/app/share.js",
+					"public/img/7.jpg"
+				],
+				"refer": [
+					"view/chat-details.html",
+					"view/chat.html",
+					"view/home-task.html",
+					"view/home-good.html",
+					"view/home-car.html",
+					"view/cash.html",
+					"view/home-liulan.html",
+					"view/chat-us.html",
+					"view/home-tao.html",
+					"view/bangding-taobao.html",
+					"view/taobaoapp.html"
+				],
+				"priority": 0
+			},
+			"view/class.html": {
+				"resources": [
+					"public/img/42.png",
+					"css/main.css",
+					"public/img/41.png",
+					"public/img/40.png",
+					"public/img/33.png",
+					"js/mui.min.js",
+					"js/mui.min2.js",
+					"js/jquery-2.1.4.min.js",
+					"js/mui.indexedlist.js"
+				],
+				"refer": [
+					"view/goods-item.html"
+				],
+				"priority": 0
+			},
+			"view/shopping-car.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"public/img/inputbg.png",
+					"public/img/3.png",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/jquery/jquery.js",
+					"js/function.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/order-ok.html"
+				],
+				"priority": 0
+			},
+			"view/order-ok.html": {
+				"resources": [],
+				"refer": [
+					"view/pay.html"
+				],
+				"priority": 0
+			},
+			"view/money.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/cost-record.html",
+					"view/rechange.html"
+				],
+				"priority": 0
+			},
+			"view/order-details.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff"
+				],
+				"refer": [
+					"view/order-refund.html"
+				],
+				"priority": 0
+			},
+			"view/my-touzi.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/cash.html"
+				],
+				"priority": 0
+			},
+			"view/share.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/2.png",
+					"libs/mui/mui.css",
+					"public/img/1.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/goods-item.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/3.png",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/room.html": {
+				"resources": [
+					"public/img/1-2.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"css/main.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/room-details.html",
+					"view/sousuo.html",
+					"view/create-room.html"
+				],
+				"priority": 0
+			},
+			"view/post.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/tiezi-details.html",
+					"view/person-card1.html"
+				],
+				"priority": 0
+			},
+			"view/chat.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"css/mui.imageviewer.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/chat-tiezi.html"
+				],
+				"priority": 0
+			},
+			"view/room-details.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1-2.jpg",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/chat-room.html",
+					"view/tiezi-room.html",
+					"view/admin-item.html",
+					"view/admin-power2.html",
+					"view/room-write.html",
+					"view/room-setting.html",
+					"view/room-received.html",
+					"view/all-admin.html"
+				],
+				"priority": 0
+			},
+			"view/chat-room.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/chat-details.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/person-card1.html"
+				],
+				"priority": 0
+			},
+			"view/use.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/tiezi-details.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-friend.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"public/img/1-3.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/person-infor.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/mui.picker.css",
+					"public/img/1-1.jpg",
+					"js/city.data-3.js",
+					"js/open.js",
+					"js/mui.min.js",
+					"js/mui.poppicker.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1-2.jpg",
+					"css/mui.poppicker.css",
+					"js/city.data.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/room-details.html"
+				],
+				"priority": 0
+			},
+			"view/cost-record.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/rechange.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/online-kefu.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/password2.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"libs/iconfont/fonts/iconfont.woff"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/chat-tiezi.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/tiezi-details.html"
+				],
+				"priority": 0
+			},
+			"view/tiezi-room.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/tiezi-details.html"
+				],
+				"priority": 0
+			},
+			"view/admin-item.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/admin-power.html",
+					"view/admin-power2.html",
+					"view/admin-power1.html"
+				],
+				"priority": 0
+			},
+			"view/admin-power2.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/room-write.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1-2.jpg",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/room-setting.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1-3.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/password1.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-room.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1-2.jpg",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/room-details.html"
+				],
+				"priority": 0
+			},
+			"view/person-card1.html": {
+				"resources": [
+					"public/img/1-3.png",
+					"libs/mui/mui.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/1-2.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/create-room.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/3.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/room-received.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/admin-power.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/admin-power1.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/all-admin.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/car-admin.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"css/mui.min.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css",
+					"js/mui.min.js"
+				],
+				"refer": [
+					"view/sousuo.html"
+				],
+				"priority": 0
+			},
+			"view/buy-ok.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/28.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/new-addr.html"
+				],
+				"priority": 0
+			},
+			"view/road.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"public/img/12.jpg",
+					"public/img/1.jpg",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/road-cz1.html",
+					"view/my-road.html",
+					"view/road-cz.html",
+					"view/record-road.html"
+				],
+				"priority": 0
+			},
+			"view/active.html": {
+				"resources": [
+					"public/img/9.jpg",
+					"public/img/8.jpg",
+					"js/jquery-2.1.4.min.js",
+					"public/img/7.jpg",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/message.html",
+					"view/intro-active.html",
+					"view/active-details.html",
+					"view/my-infor.html"
+				],
+				"priority": 0
+			},
+			"view/nearby.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/iconfont.css",
+					"public/img/5.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/37.jpg",
+					"public/img/1.png",
+					"public/img/4.jpg",
+					"libs/mui/mui.css",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [
+					"view/my-active1.html"
+				],
+				"priority": 0
+			},
+			"view/shopping.html": {
+				"resources": [
+					"public/img/31.jpg",
+					"public/img/30.jpg",
+					"public/img/29.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/32.jpg",
+					"public/img/28.jpg",
+					"public/img/27.jpg",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"js/mui.min.js",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/goods-details.html",
+					"view/my-order.html"
+				],
+				"priority": 0
+			},
+			"view/my-active1.html": {
+				"resources": [
+					"public/img/9.jpg",
+					"public/img/6.jpg",
+					"public/img/8.jpg",
+					"js/mui.js",
+					"public/img/7.jpg"
+				],
+				"refer": [
+					"view/little-note1.html",
+					"view/my-infor.html"
+				],
+				"priority": 0
+			},
+			"view/club.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/40.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/club-chat.html",
+					"view/club-create.html",
+					"view/club-sousuo.html"
+				],
+				"priority": 0
+			},
+			"view/exchange-zone.html": {
+				"resources": [
+					"public/img/52.jpg",
+					"css/main.css",
+					"public/img/49.jpg",
+					"libs/iconfont/fonts/iconfont.css",
+					"public/img/51.jpg",
+					"js/open.js",
+					"public/img/50.jpg",
+					"public/img/33.jpg",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/53.jpg",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/exchange-goods.html",
+					"view/exchange-record.html"
+				],
+				"priority": 0
+			},
+			"view/stars-coash.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"public/img/5.jpg",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"js/mui.js",
+					"public/img/4.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/stars-coash1.html"
+				],
+				"priority": 0
+			},
+			"view/activity-star.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"js/mui.picker.min.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"css/mui.picker.min.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/activity-place.html"
+				],
+				"priority": 0
+			},
+			"view/activity.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"public/img/63.jpg",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/activity-star.html",
+					"view/activity-details.html",
+					"view/activity-my.html"
+				],
+				"priority": 0
+			},
+			"view/intro-active.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/active-details.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/9.jpg",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/8.jpg",
+					"js/jquery-2.1.4.min.js",
+					"public/img/7.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/my-infor.html"
+				],
+				"priority": 0
+			},
+			"view/exchange-goods.html": {
+				"resources": [
+					"public/img/60.jpg",
+					"public/img/55.jpg",
+					"public/img/54.jpg",
+					"public/img/61.jpg",
+					"public/img/57.jpg",
+					"public/img/59.jpg",
+					"public/img/62.jpg",
+					"public/img/56.jpg",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/activity-details.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/jquery-2.1.4.min.js",
+					"public/img/1.jpg",
+					"public/img/63.jpg",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/activity-place.html": {
+				"resources": [
+					"public/img/64.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/activity-my.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"public/img/1.jpg",
+					"public/img/63.jpg",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/road-cz1.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/13.jpg",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/little-note.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"public/img/5.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/4.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/little-note1.html"
+				],
+				"priority": 0
+			},
+			"view/little-note1.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"public/img/1.png",
+					"public/img/38.jpg",
+					"public/img/39.jpg",
+					"js/jquery-2.1.4.min.js",
+					"css/chat.css",
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/found-sousuo.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-road1.html": {
+				"resources": [
+					"public/img/13.jpg",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/road-cz.html"
+				],
+				"priority": 0
+			},
+			"view/my-road.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"public/img/15.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/my-road1.html"
+				],
+				"priority": 0
+			},
+			"view/road-cz.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"public/img/17.jpg",
+					"public/img/14.jpg",
+					"public/img/12.jpg",
+					"public/img/16.jpg",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css",
+					"public/img/63.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/car-ok.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/car-ok1.html"
+				],
+				"priority": 0
+			},
+			"view/after-sale.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/question-answer.html",
+					"view/new-teach.html",
+					"view/problem.html",
+					"view/option-back.html"
+				],
+				"priority": 0
+			},
+			"view/my-infor.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/my-infor1.html"
+				],
+				"priority": 0
+			},
+			"view/car-ok1.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/question-answer.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/new-teach.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/10.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/option-back.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-red.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/iconfont.css",
+					"public/img/5.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/4.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/car.html": {
+				"resources": [
+					"public/img/70.png",
+					"js/echarts.min.js",
+					"css/main.css",
+					"public/img/69.png",
+					"public/img/68.png",
+					"js/jump.js",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/mui.css",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [
+					"view/car-admin.html",
+					"view/car-state.html"
+				],
+				"priority": 0
+			},
+			"view/goods-details.html": {
+				"resources": [
+					"public/img/35.jpg",
+					"libs/iconfont/fonts/iconfont.woff",
+					"public/img/33.jpg",
+					"public/img/34.jpg"
+				],
+				"refer": [
+					"view/buy-ok.html"
+				],
+				"priority": 0
+			},
+			"view/new-addr.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"css/mui.poppicker.css",
+					"css/mui.picker.css",
+					"js/city.data-3.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-order.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/28.jpg",
+					"libs/jquery/jquery.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/order-rate.html"
+				],
+				"priority": 0
+			},
+			"view/order-rate.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/club-chat.html": {
+				"resources": [
+					"public/img/43.jpg",
+					"public/img/1.jpg",
+					"public/img/41.jpg",
+					"css/popup.css",
+					"public/img/1.png",
+					"public/img/42.jpg",
+					"public/img/38.jpg",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"public/img/44.jpg",
+					"css/chat.css",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/open.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/club-red.html"
+				],
+				"priority": 0
+			},
+			"view/stars-coash1.html": {
+				"resources": [
+					"public/img/46.jpg"
+				],
+				"refer": [
+					"view/stars-coash3.html",
+					"view/coash-replay.html"
+				],
+				"priority": 0
+			},
+			"view/rank.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.min.js",
+					"libs/iconfont/iconfont.css",
+					"public/img/5.jpg",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/4.jpg",
+					"libs/mui/mui.css",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/coash-replay.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/47.jpg",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/48.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/car-state.html": {
+				"resources": [
+					"libs/mui/fonts/mui.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/music-dz.html",
+					"view/blus-password.html",
+					"view/today-road.html",
+					"view/fault-detectiom.html",
+					"view/active-lz.html",
+					"view/header-draw.html",
+					"view/ware-update.html"
+				],
+				"priority": 0
+			},
+			"view/blus-password.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/today-road.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"libs/mui/mui.js",
+					"libs/iconfont/iconfont.css",
+					"public/img/13.jpg",
+					"js/jquery-2.1.4.min.js",
+					"libs/jquery/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/fault-detectiom.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/music-dz.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/active-lz.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/10.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/header-draw.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/10.jpg",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/ware-update.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/my-setting.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.css"
+				],
+				"refer": [
+					"view/login.html"
+				],
+				"priority": 0
+			},
+			"view/club-red.html": {
+				"resources": [
+					"public/img/1.jpg",
+					"js/open.js",
+					"css/main.css",
+					"public/img/5.jpg",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/1.png",
+					"public/img/45.jpg",
+					"js/mui.js",
+					"public/img/4.jpg",
+					"libs/mui/mui.css",
+					"js/jquery-2.1.4.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/record-road1.html": {
+				"resources": [],
+				"refer": [
+					"view/record-road2.html"
+				],
+				"priority": 0
+			},
+			"view/perfect-infor.html": {
+				"resources": [
+					"public/img/63.jpg",
+					"public/img/14.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/record-road2.html": {
+				"resources": [],
+				"refer": [
+					"view/perfect-infor.html"
+				],
+				"priority": 0
+			},
+			"view/record-road.html": {
+				"resources": [
+					"public/img/13.jpg",
+					"libs/iconfont/fonts/iconfont.ttf",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/record-road1.html"
+				],
+				"priority": 0
+			},
+			"view/club-create.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.poppicker.js",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/city.data.js",
+					"js/mui.js",
+					"css/mui.poppicker.css",
+					"css/mui.picker.css",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/club-sousuo.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/40.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/home-good.html": {
+				"resources": [
+					"css/main.css",
+					"public/img/15.png",
+					"public/img/16.png",
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"public/img/5.jpg",
+					"public/img/6.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"public/img/14.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/home-good-ing.html"
+				],
+				"priority": 0
+			},
+			"view/home-car.html": {
+				"resources": [
+					"css/main.css",
+					"public/img/15.png",
+					"public/img/16.png",
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"public/img/5.jpg",
+					"public/img/6.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"public/img/14.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/business.html": {
+				"resources": [
+					"public/img/7.jpg",
+					"css/main.css",
+					"js/app/business.js"
+				],
+				"refer": [
+					"view/task-car.html",
+					"view/task-read.html",
+					"view/task-admin.html"
+				],
+				"priority": 0
+			},
+			"view/task-car.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/mui.picker.min.css",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/task-read.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"css/popup.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"css/mui.picker.min.css",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/bangding-taobao.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"js/open.js",
+					"css/main.css",
+					"js/mui.poppicker.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"js/mui.js",
+					"css/mui.poppicker.css",
+					"css/mui.picker.css",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [
+					"view/bangding-taobao1.html",
+					"view/img-example.html"
+				],
+				"priority": 0
+			},
+			"view/bangding-taobao1.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/xiugai-word.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/xiugai-word1.html"
+				],
+				"priority": 0
+			},
+			"view/home-liulan.html": {
+				"resources": [
+					"css/main.css",
+					"public/img/15.png",
+					"public/img/16.png",
+					"js/jquery-2.1.4.min.js",
+					"js/open.js",
+					"public/img/5.jpg",
+					"public/img/6.png",
+					"libs/mui/fonts/mui.ttf",
+					"public/img/11.png",
+					"js/mui.js",
+					"public/img/14.png",
+					"public/img/4.png",
+					"libs/mui/mui.css",
+					"js/app/home-liulan.js",
+					"js/public.js"
+				],
+				"refer": [
+					"view/home-liulan-ing.html"
+				],
+				"priority": 0
+			},
+			"view/chat-us.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/4.jpg",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/home-tao.html": {
+				"resources": [
+					"public/img/15.png",
+					"public/img/5.jpg",
+					"public/img/6.png",
+					"public/img/11.png",
+					"public/img/14.png",
+					"public/img/16.png",
+					"public/img/4.png"
+				],
+				"refer": [
+					"view/home-tao-ing.html"
+				],
+				"priority": 0
+			},
+			"view/task-admin.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/img-example.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"public/img/5.jpg",
+					"public/img/3.png",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"public/img/16.png",
+					"public/img/4.png",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/bangding-qq.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/mui.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/xiugai-word1.html": {
+				"resources": [
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css",
+					"js/mui.js"
+				],
+				"refer": [
+					"view/index.html"
+				],
+				"priority": 0
+			},
+			"view/xiugai-pay.html": {
+				"resources": [
+					"libs/mui/mui.js",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"libs/mui/mui.css"
+				],
+				"refer": [
+					"view/xiugai-pay1.html"
+				],
+				"priority": 0
+			},
+			"view/home-good-ing.html": {
+				"resources": [
+					"libs/iconfont/fonts/iconfont.woff",
+					"libs/iconfont/fonts/iconfont.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/cash-details.html": {
+				"resources": [
+					"js/app/cash-details.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/home-liulan-ing.html": {
+				"resources": [
+					"js/app/home-liulan-ing.js",
+					"js/mui.js",
+					"public/img/14.png",
+					"js/open.js",
+					"css/main.css",
+					"libs/iconfont/fonts/iconfont.woff",
+					"js/public.js",
+					"libs/iconfont/fonts/iconfont.css",
+					"libs/mui/fonts/mui.ttf",
+					"js/jquery-2.1.4.min.js",
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/tuijian-show.html": {
+				"resources": [
+					"js/clipboard.min.js",
+					"js/app/tuijian-show.js",
+					"libs/mui/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/taobaoapp.html": {
+				"resources": [
+					"libs/mui/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"public/img/bankCard.png",
+				"public/cache/bankCard.png",
+				"public/cache/background.png",
+				"testim/login.html",
+				"public/cache/defaultPic.png",
+				"test/resetBounce.html",
+				"public/cache/example1.png",
+				"public/cache/zhifubao.png",
+				"doc/a.jpg",
+				"libs/easemob/easemob.im.config.js",
+				"public/cache/weinxin.png",
+				"libs/turnjs/turn.min.js",
+				"public/cache/delivery.png",
+				"libs/easemob/easemob.im.js",
+				"libs/turnjs/scissor.js",
+				"public/img/receive.png",
+				"public/cache/example2.png",
+				"public/cache/daijiedan.png",
+				"libs/ui/common.js",
+				"public/cache/QIN.png",
+				"test/menu.html",
+				"public/img/example3.png",
+				"public/img/example1.png",
+				"libs/other/json2.js",
+				"libs/tool/date/date.js",
+				"public/cache/finished.png",
+				"view/pages.html",
+				"public/cache/example3.png",
+				"public/img/waiting.png",
+				"public/cache/receive.png",
+				"libs/turnjs/zoom.min.js",
+				"libs/turnjs/hash.js",
+				"libs/easemob/easemob.im.shim.js",
+				"public/cache/bankIco.png",
+				"css/index.css",
+				"public/img/finished.png",
+				"public/img/zhifubao.png",
+				"test/loading.html",
+				"public/cache/waiting.png",
+				"libs/easemob/strophe.js",
+				"public/img/daijiedan.png",
+				"public/img/delivery.png",
+				"public/img/weinxin.png",
+				"testim/reg.html",
+				"public/img/defaultPic.png",
+				"public/img/bankIco.png",
+				"public/cache/123.png",
+				"test/playwav.html",
+				"public/cache/usrPic.png",
+				"public/img/example2.png",
+				"libs/turnjs/scissor.min.js",
+				"libs/turnjs/turn.html4.min.js"
+			]
+		}
+	},
+	"unpackage": [
+		"css/index.css",
+		"doc/a.jpg",
+		"libs/easemob/easemob.im.config.js",
+		"libs/easemob/easemob.im.js",
+		"libs/easemob/easemob.im.shim.js",
+		"libs/easemob/strophe.js",
+		"libs/other/json2.js",
+		"libs/tool/date/date.js",
+		"libs/turnjs/hash.js",
+		"libs/turnjs/scissor.js",
+		"libs/turnjs/scissor.min.js",
+		"libs/turnjs/turn.html4.min.js",
+		"libs/turnjs/turn.min.js",
+		"libs/turnjs/zoom.min.js",
+		"libs/ui/common.js",
+		"test/loading.html",
+		"test/menu.html",
+		"test/playwav.html",
+		"test/resetBounce.html",
+		"testim/login.html",
+		"testim/reg.html"
+	]
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+		<title>浏览任务</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			.mui-btn{padding: 2px 5px;font-size: 14px;float: right;background: #FF5252;color: white;margin-top: -1px;border: 1px solid #FF5252;}
+			.a{line-height: 30px;}
+			.mui-table-view .mui-media-object{max-width: 70px;height: 70px;}
+			.mui-table-view{margin: 6px 4px;border-radius: 5px; position: relative;}
+			.mui-table-view:before,.mui-table-view:after{height: 0px;}
+			.bg{border-radius: 5px;position: absolute;top: 0;right: 0px;left: 0px;bottom: 0; background: rgba(76,76,76,0.7);z-index: 99;text-align: center;}
+			.bg span{color: white;margin-top:2.2em ;display: inline-block;}
+			p{color: #000000;}
+			.renwu_yaoqiu{ font-size: 0.7em; }
+			.mui-ellipsis{width: 95%;} 
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">免费试用任务</h1>
+		     <a id="quxiao" class="mui-pull-right">
+		    	<h5 id="guize" style="line-height: 33px;" onclick="openNewPage('guize.html')">试用规则</h5>
+		    </a>
+		</header>
+		<div class="mui-content">
+			<div id="liulanliebiao" >
+				<!--<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/4.png">
+				            <div class="mui-media-body">
+					            <p>任务ID：865115996 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：店铺收藏</p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>    -->
+				
+				 <!--<ul class="mui-table-view">
+				   <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/14.png">
+				            <div class="mui-media-body">
+					            <p>任务ID：8651159961 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：店铺收藏</p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <div class="bg">
+						<span>2016-09-30 12:01</span>
+					</div>
+				</ul>-->
+				
+				<!--<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/5.jpg">
+				            <div class="mui-media-body">
+					            <p>任务ID：865115996 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：<span>店铺收藏店铺收藏店铺收藏店铺收藏店铺收藏</span></p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <div class="bg">
+						<span>2016-09-30 13:30</span>
+					</div>
+				</ul>-->
+				<!--<ul class="mui-table-view">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/6.png">
+				            <div class="mui-media-body">
+					            <p>任务ID：865115996 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：店铺收藏</p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <div class="bg">
+						<span>2016-09-30 15:10</span>
+					</div>-->
+				<!--</ul>--> 
+				
+				<!--<ul class="mui-table-view kong">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/15.png">
+				            <div class="mui-media-body">
+					            <p>任务ID：865115996 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：店铺收藏</p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>
+				<ul class="mui-table-view bj">
+					<li class="mui-table-view-cell mui-text-center">
+						<span>2016-09-30 17:30</span>
+					</li>
+				</ul>-->
+				<!--<ul class="mui-table-view kong"> 
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="../public/img/14.png">
+				            <div class="mui-media-body">
+					            <p>任务ID：865115996 <button type="button" class="mui-btn">接受任务</button></p>
+				                <p class="mui-ellipsis a">任务要求：店铺收藏</p>
+				                <p>佣金： <span style="color: #FF5252;">¥0.4</span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>-->
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="../js/public.js" ></script>
+	<script type="text/javascript" src="../js/app/free-shiyong.js" ></script>
+	<script>
+//		$(".mui-media").click(function(){
+//			openNewPage('home-liulan-ing.html'); 
+//		}) 
+//		$(".bj").click(function(){
+//			openNewPage('home-liulan-ing.html');
+//		}) 
+	</script>
+</html>

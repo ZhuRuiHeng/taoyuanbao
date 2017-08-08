@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">	
+		<title>帮助中心</title>
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../libs/iconfont/fonts/iconfont.css" />
+		<link rel="stylesheet" href="../libs/mui/mui.css" />
+		<style type="text/css">
+			body{font-size: 16px;}
+			p{margin-top: 8px;}
+			.jian{color: #FF6766;float: right;}
+			.jia{color: #67B809;float: right;}
+			.ye{float: right;}
+			.mui-media-body.wenben{color: #8f8f94!important;}
+			.mui-media-body.mui-biaoti{font-size: 15px!important;}
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{font-size: 14px!important;}
+			.mui-btn-block{font-size: 17px;;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">帮助中心</h1>
+		</header>
+		<div class="mui-content">
+			<div id="helps" >
+				<ul class="mui-table-view">
+				 	<li class="mui-table-view-cell">自助问答</li>
+				</ul>
+				<ul class="mui-table-view mui-grid-view mui-grid-9" style="background: #fff;">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" onclick="openNewPage('helps_zhanghu.html')">
+		            	<a href="javascript:;">
+		                    <span class="mui-icon mui-icon"><img  style="width:36px" src="../img/zhanghu.png"/></span>
+		                    <div class="mui-media-body mui-biaoti">账户管理</div>
+		                    <div class="mui-media-body wenben">注册，登录等问题</div>
+		            	</a>
+		           	</li>
+		           	<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" onclick="openNewPage('helps_zhijin.html')">
+		            	<a href="javascript:;">
+		                    <span class="mui-icon mui-icon"><img style="width:36px" src="../img/tixian.png"/></span>
+		                    <div class="mui-media-body mui-biaoti">资金提现</div>
+		                    <div class="mui-media-body wenben">资金提现等问题</div>
+		            	</a>
+		           	</li>
+		           	<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" onclick="openNewPage('helps_guanli.html')">
+		            	<a href="javascript:;">
+		                    <span class="mui-icon mui-icon"><img style="width:36px" src="../img/renwu.png"/></span>
+		                    <div class="mui-media-body mui-biaoti">任务管理</div>
+		                    <div class="mui-media-body wenben">做任务类问题</div>
+		            	</a>
+		           	</li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" onclick="openNewPage('helps_fanli.html')">
+		            	<a href="javascript:;">
+		                    <span class="mui-icon mui-icon"><img style="width:36px" src="../img/fan.png"/></span>
+		                    <div class="mui-media-body mui-biaoti">邀请返利</div>
+		                    <div class="mui-media-body wenben">收徒，佣金发放等问题</div>
+		            	</a>
+		           	</li>
+		        </ul>
+			</div>
+			<!--在线客服-->
+			<div id="kefu_qq">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell sr">
+						在线客服（工作日：每日9:00-21:00）
+					</li>
+				</ul>
+				<p style="padding: 0 10px;">*所有常见问题都有相应的解决方案，请参考常见问题自助解决；如常见问题无法解决
+				您的问题在咨询客服。由于客服咨询量较大，请尽可能的描述清楚您的问题，以便快速解决
+				</p>		
+			</div>
+			<div class="zixun" style=" width:90%;margin:0 auto;">
+				<button id="zixun_qq" class="mui-btn mui-btn-block zixun_qq" style="padding: 10px 0;background: #FF5252;color:#fff;">
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3133787952&site=qq&menu=yes" style="color: #fff;">
+						<span class="mui-icon iconfont" style="font-size: 20px;">&#xe611;</span> <span>|</span> <span>QQ咨询</span>
+					</a>
+				</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.js" ></script>
+	<script type="text/javascript" src="../js/open.js" ></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+	<script>
+//	document.addEventListener('plusready',function(){
+//		//打开qq
+//		 function openqq(){
+//          var type = undefined;
+//          var param = "";
+//          var sid = 2;
+//          var rawuin =  2220610957;//这里填写QQ号
+//          var qsig = "undefined";
+//          var QQApi = {
+//              openURL: function(url){
+//                  var i = document.createElement('iframe');
+//                  i.style.display = 'none';
+//                  i.onload = function() { i.parentNode.removeChild(i); };
+//                  i.src = url;
+//                  document.body.appendChild(i);
+//
+//                  var returnValue = QQApi.__RETURN_VALUE;
+//                  QQApi.__RETURN_VALUE = undefined;
+//                  return returnValue;
+//              },
+//
+//              isAppInstalled: function(scheme) {
+//                  var parameters = {'scheme':scheme};
+//                  var r = QQApi.openURL('jsbridge://app/isInstalled_?p=' + encodeURIComponent(JSON.stringify(parameters)));
+//                  return r ? r.result : null;
+//              },
+//
+//              isQQWebView: function(){
+//                  return QQApi.isAppInstalled('mqq') == true;
+//              },
+//
+//              __RETURN_VALUE: undefined
+//          };
+//
+//          var usa=navigator.userAgent;
+//          var p;
+//          var mobile_q_jump = {
+//              android:"https://play.google.com/store/apps/details?id=com.tencent.mobileqq",
+//              ios:"itms-apps://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8",
+//              winphone:"http://www.windowsphone.com/zh-cn/store/app/qq/b45f0a5f-13d8-422b-9be5-c750af531762",
+//              pc:"http://mobile.qq.com/index.html"
+//          };
+//          var isMQ = 0;
+//          if(typeof type == "undefined") type = 1;
+//          if(usa.indexOf("Android")>-1){
+//              p = "android";
+//          }
+//          else if(usa.indexOf("iPhone")>-1 || usa.indexOf("iPad")>-1 || usa.indexOf("iPod")>-1){
+//              p = "ios";
+//          }
+//          else if(usa.indexOf("Windows Phone") > -1 || usa.indexOf("WPDesktop") > -1){
+//              p = "winphone";
+//          }
+//          else {
+//              p = "pc";
+//          }
+//          if(p == "ios"){
+//              //防止循环
+//              if(history.pushState)
+//                  history.pushState({},"t","#");
+//              isMQ = QQApi.isQQWebView();
+//              if (!isMQ){ 
+//                  var sc = document.createElement("script");
+//                  sc.src = "http://__.qq.com/api/qqapi.js";
+//                  sc.onload = function(){
+//                      if(window['iOSQQApi']){
+//                          isMQ =iOSQQApi.device.isMobileQQ(); 
+//                      }
+//                  };
+//                  document.body.appendChild(sc);
+//              }
+//          }
+//          else if(p == "pc" && qsig != "undefined"){
+//              window.open(qsig,"_self");
+//          }
+//          if(type == 1){//手Q
+//              var isSuccess = true;
+//              var f = document.createElement("iframe");
+//              f.style.display = "none";
+//              document.body.appendChild(f);
+//              f.onload = function(){
+//                  isSuccess = false;
+//              };
+//              if(p == "ios" && sid == 1){
+//
+//                  f.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ rawuin +"&card_type=person&source=qrcode";
+//              }
+//              if(p == "ios" && sid == 2){//ios并且为群名片
+//                   //打开appstore
+//                  f.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ rawuin +"&card_type=person&source=qrcode";
+//              }
+//              else if(p != "pc"){
+//                  var url = window.location.href.split("&");
+//                  f.src = "mqqopensdkapi://bizAgent/qm/qr?url=" + encodeURIComponent(url[0]);
+//              }
+//              if(p == "android" && sid == 1){
+//                  f.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ rawuin +"&card_type=person&source=qrcode";
+//              }
+//              if(p == "android" && sid == 2){//ios并且为群名片
+//                  f.src = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+ rawuin +"&card_type=person&source=qrcode";
+//              }
+//              var now = Date.now();
+//              setTimeout( function(){
+//                  if((p == "ios" && !isMQ && Date.now() - now < 2000) || (p == "android" && !isSuccess) || ((p == "winphone" && Date.now() - now < 2000))){
+//                      var jumpUrl = mobile_q_jump[p]; 
+//                      if(jumpUrl) window.open(jumpUrl,"_self");
+//                  }
+//              } , 1500);
+//
+//          }
+//      }
+		 
+		 
+		document.getElementById("zixun_qq").addEventListener('tap', function() {
+				//mui.toast('请手动复制关键词');
+				var btnArray = ['否', '是'];
+				mui.confirm('是否跳转到QQ', '提示', btnArray, function(e) {
+					if (e.index == 1) {
+						//跳转qq
+					//window.location.href = 'https://m.taobao.com/#index';
+					openqq();
+					
+	
+					} else {
+						//取消跳转
+					}
+				})
+		});	
+	
+	</script>
+</html>
