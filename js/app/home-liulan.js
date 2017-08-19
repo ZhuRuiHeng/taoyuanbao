@@ -92,6 +92,30 @@ document.addEventListener('plusready',function(){
 					ws.close();
 					return;
 				}
+				//加急任务
+				else if(xianshi=='加急任务'){
+					$('.jiaji-box,.mui-popup-backdrop').show();
+					$('body').css('overflow','hidden');
+					//mui(".mui-popup-buttons").on('tap','span',function(e){
+						var id = mui(".mui-popup-buttons");
+						var liS = mui(".mui-popup-buttons span");
+						for(var j = 0 ; j < liS.length ; j++){
+							liS[j].index = j;
+						}
+						mui('.mui-popup-buttons').on('tap','span',function(){
+							var k = this.index;
+							console.log(k);
+							if(k == 0){
+								mui.toast('领取任务成功');
+								$('.jiaji-box,.mui-popup-backdrop').hide();
+							}else{
+								mui.toast('您取消了领取任务');
+								$('.jiaji-box,.mui-popup-backdrop').hide();
+							}
+						});
+							
+					}
+				//}
 				var begin_time = $(this).attr('data-time');
 				var renwu_id = $(this).attr('data-renwu_id');
 				

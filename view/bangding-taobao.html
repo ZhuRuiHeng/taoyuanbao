@@ -125,30 +125,36 @@
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
 					</li>
 					<!--隐藏-->
-					<!--<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
-						<i id="zhangdan2_pic"  data-id="zhangdan1_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
+						<i id="zhangdan2_pic"  data-id="zhangdan2_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
 					</li>
 					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
-						<i id="zhangdan2_pic"  data-id="zhangdan1_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<i id="zhangdan3_pic"  data-id="zhangdan3_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
 					</li>
 					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
-						<i id="zhangdan2_pic"  data-id="zhangdan1_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<i id="zhangdan4_pic"  data-id="zhangdan4_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
 					</li>
 					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
-						<i id="zhangdan2_pic"  data-id="zhangdan1_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<i id="zhangdan5_pic"  data-id="zhangdan5_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
 					</li>
 					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
-						<i id="zhangdan2_pic"  data-id="zhangdan1_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<i id="zhangdan6_pic"  data-id="zhangdan6_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
 						<p class="mui-ellipsis">支付宝上个月账单截图</p>
-					</li>-->
-					<li class="mui-table-view-cell mui-col-xs-3" id="xinzeng">
+					</li>
+					<li class="mui-table-view-cell mui-col-xs-3" id="zhifubao_new">
+						<i id="zhangdan7_pic"  data-id="zhangdan7_pic" class="mui-icon iconfont tupian">&#xe61b;</i>
+						<p class="mui-ellipsis">支付宝上个月账单截图</p>
+					</li>
+					<!--<li class="mui-table-view-cell mui-col-xs-3" id="xinzeng">
 						<i id="addnew" data-id="addnew" class="mui-icon iconfont addnew" style="width: 64px;height: 64px;">+</i>
 						<p class="mui-ellipsis">新增</p>
-					</li>
+					</li>-->
+					
+					
 					
 				</ul>
 			</div>
@@ -218,28 +224,28 @@
 			});
 		})(mui, document);
 		
-		$(function(){
-			//点击新增上传窗口
-				var btn = document.getElementById("addnew");
-				//监听点击事件
-				var i=1;
-				var html="";
-				btn.addEventListener("tap",function () {
-				  i=++i;
-				  //console.log(i);
-				  //最多10张
-				  if(i>10){
-				  	mui.toast('最多只能上传10张支付宝上个月账单截图');
-				  	return;
-				  }
-				  html='<li class="mui-table-view-cell mui-col-xs-3">'+	
-				  			'<i id="zhangdan'+i+'_pic" data-id="zhangdan'+i+'_pic" class="mui-icon iconfont tupian">&#xe61b;</i>'+
-				  			'<p class="mui-ellipsis">支付宝上个月账单截图</p>'+
-				  		'</li>';
-				  $("#xinzeng").before(html);
-				});
-		})
-		
+//		$(function(){
+//			//点击新增上传窗口
+//				var btn = document.getElementById("addnew");
+//				//监听点击事件
+//				var i=1;
+//				var html="";
+//				btn.addEventListener("tap",function () {
+//				  i=++i;
+//				  //console.log(i);
+//				  //最多10张
+//				  if(i>10){
+//				  	mui.toast('最多只能上传10张支付宝上个月账单截图');
+//				  	return;
+//				  }
+//				  html='<li class="mui-table-view-cell mui-col-xs-3">'+	
+//				  			'<i id="zhangdan'+i+'_pic" data-id="zhangdan'+i+'_pic" class="mui-icon iconfont tupian">&#xe61b;</i>'+
+//				  			'<p class="mui-ellipsis">支付宝上个月账单截图</p>'+
+//				  		'</li>';
+//				  $("#xinzeng").before(html);
+//				});
+//		})
+//		
 
 	</script>
 </html>

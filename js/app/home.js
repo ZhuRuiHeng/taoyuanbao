@@ -14,35 +14,69 @@ document.addEventListener('plusready',function(){
 	userid = plus.storage.getItem('id');
 	yonghu = plus.storage.getItem('user');
 	//用户提交绑定淘宝账号审核，审核通过弹窗，审核不通过弹窗
+	
 	$.ajax({
-			type:"get",
-			url : apiRoot + "?m=Home&c=Photo&a=sel_bangdingtb",
-			data : { 
-				id : userid
-			},
-			dataType : 'json',
-			success : function(data){
-				console.log(JSON.stringify(data));  
-				if(data.length > 0){
-					$.each(data, function(index,value){
-		                console.log(data);
-		               // alert('账号');
-		                if(value.zhanghao_shenhe == 1){
-		                 	mui.alert('审核通过', '淘宝账号审核状态', function() {
-								
+    	type:"get",
+    	url : apiRoot + "?m=Home&c=Photo&a=sel_bangdingtb",
+    	data : {
+    		id : userid
+    	},
+    	dataType : 'json',
+    	success : function(data){
+    	
+    		plus.nativeUI.closeWaiting();
+    		console.log('账号弹窗：'+JSON.stringify(data));
+    		if(data.length > 0){
+    			$.each(data, function(index,value){
+    				console.log(value.state);
+    				
+    				if(value.state==1){
+    					alert('value.zhanghao_shenhe'+value.zhanghao_shenhe);
+    					 if(value.zhanghao_shenhe == 1){
+		                	mui.alert('审核通过', '淘宝账号：“'+value.taobao_zhangh+value.aid+'”的审核状态', function(aid) {
+								 
 							});
 							
 		                   }else if(value.zhanghao_shenhe == 2){
-			                    mui.alert('审核不通过', '淘宝账号审核状态', function() {
-									
+			                    mui.alert('审核不通过', '淘宝账号审核状态', function(aid) {
+									alert(value.aid);
 								});
-		                  };
-		             });
-					
-				}
-			}
-		});
-	console.log(yonghu+'---------')
+		                  	};
+	                  	//传给后台有没有弹窗
+	                  	$.ajax({
+						    	type:"get",
+						    	url : apiRoot + "?m=Home&c=Photo&a=bd",  
+						    	data : {
+						    		aid : value.aid,
+						    		renwuzhuangtai : 0
+						    	}, 
+						        dataType : 'json',
+						        success : function(data){
+						        	plus.nativeUI.closeWaiting();
+						        	console.log(JSON.stringify(data));
+						        	if(state == "1"){
+						        		
+						        	}
+						        },
+						        error : function(e){
+							    	plus.nativeUI.closeWaiting();
+						        	console.log(JSON.stringify(e));
+							    }
+						        
+						    });
+
+    				}else{
+    					//不弹
+    				}
+    			})
+    		}else{ 
+    			plus.nativeUI.toast('error');
+    		}
+    	},
+    	error : function(e){
+    		console.log(JSON.stringify(e));
+    	}
+    });
 	// 刷新
 	PullToRefresh(ws);
 	//  获取当天日期

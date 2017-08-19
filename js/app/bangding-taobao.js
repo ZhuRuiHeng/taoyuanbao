@@ -103,7 +103,57 @@ document.addEventListener('plusready',function(){
 		task.addFile(f.path,{key:f.name});
 		task.start(); 
 	}
+	//新增获取验证码
+	 //获取验证吗
+	var tel=0,t=60,tt,t2;
+	$('#yanzheng').on('tap',getcheck)
+	function getcheck(){ 
+		phone = $('#taobao_sj').val();
+		console.log("手机号："+phone)
+		var leixing = 'zhuce';
+		if(!phone){ 
+			plus.nativeUI.toast('手机号不能为空！');return;
+		}else if(!phone.match(p1)){ 
+			plus.nativeUI.toast('手机号码格式不正确！');return;
+		}
+		console.log(apiRoot+"?m=Home&c=Index&a=yanzheng&phone="+phone+"&leixing="+leixing);
+		$.ajax({
+		    type:"get", 
+		    url:apiRoot+"?m=Home&c=Index&a=yanzheng&phone="+phone+"&leixing="+leixing,
+		    success:function(data){  
+		    	code = data.code;
+		    	console.log(data);
+		    	tt = setInterval(function() {
+		                time_less();
+		             },1000);
+		    toast('验证码发送成功');
+		    },error:function(e){
+		    	$('#yanzheng').unbind('tap');
+		    	$('#yanzheng').on('tap',function() {
+		            getcheck();
+		        });
+		        $('#yanzheng').html('获取验证码');
+		    }
+		});
+	}
 	
+	function time_less () {
+	    t--;
+	    $('#yanzheng').html(t);
+	    if(t <=0){
+		    clearInterval(tt);
+		    $('#yanzheng').unbind('tap');
+		    $('#yanzheng').on('tap',function() {
+		        getcheck();
+		    });
+			$('#yanzheng').html('重新获取');
+			t = 60;
+	    }
+	}
+	
+	
+	
+	//获取验证码结束
 	$('#tijiao').on('tap',function(){
 		//alert(11);
 		var my_taobao_pic = plus.storage.getItem('my_taobao_pic');
@@ -113,8 +163,8 @@ document.addEventListener('plusready',function(){
 		var pingjia_pic   = plus.storage.getItem('pingjia_pic');
 		
 		var zhangdan1_pic = plus.storage.getItem('zhangdan1_pic');
-//		var zhangdan2_pic = plus.storage.getItem('zhangdan2_pic');
-//		var zhangdan3_pic = plus.storage.getItem('zhangdan3_pic');
+		var zhangdan2_pic = plus.storage.getItem('zhangdan2_pic');
+		var zhangdan3_pic = plus.storage.getItem('zhangdan3_pic');
 //		var zhangdan4_pic = plus.storage.getItem('zhangdan4_pic');
 //		var zhangdan5_pic = plus.storage.getItem('zhangdan5_pic');
 //		var zhangdan6_pic = plus.storage.getItem('zhangdan6_pic');
@@ -132,6 +182,9 @@ document.addEventListener('plusready',function(){
 	    var taobao_address = $('#cityResult3').val();
 	    var taobao_nicheng = $('#taobao_nicheng').val();
 	    var zhanghao_sex   = $('#userResult').val();
+		//	    新增手机号，验证码
+		var taobao_sj  = $('#taobao_sj').val();
+		var taobao_yanz  = $('#taobao_yanz').val();
 	    console.log('----1111'+taobao_nicheng+'---------------');
 	    if (!taobao_zhangh) {
 			plus.nativeUI.toast('淘宝账号不能为空！');
@@ -168,7 +221,16 @@ document.addEventListener('plusready',function(){
 			plus.nativeUI.toast('请至少上传一张支付宝账单截图！');
 			return;
 		}
+		else if(!taobao_sj){
+			plus.nativeUI.toast('手机号不能为空！');return;
+		}
+		else if(!taobao_yanz){
+			plus.nativeUI.toast('验证码不能为空！');return;
+		}
         plus.nativeUI.showWaiting('提交中...');
+        
+        
+   
         
         $.ajax({
         	type:"get",
@@ -180,13 +242,21 @@ document.addEventListener('plusready',function(){
         	   taobao_nicheng : taobao_nicheng,
 		 	   taobao_address : taobao_address,
 		 	   	 zhanghao_sex : zhanghao_sex,
-		 	   	 	taobao_age : taobao_age,
+		 	   	   taobao_age : taobao_age,
+		 	   	 	taobao_sj : taobao_sj,
+		 	   	  taobao_yanz : taobao_yanz,
         		my_taobao_pic : my_taobao_pic,
         		   person_pic : person_pic,
         		  huiyuan_pic : huiyuan_pic,
         		    xinyu_pic : xinyu_pic,
         		  pingjia_pic : pingjia_pic,
-        		zhangdan1_pic :zhangdan1_pic
+        		zhangdan1_pic :zhangdan1_pic,
+        		zhangdan2_pic :zhangdan2_pic,
+        		zhangdan3_pic :zhangdan3_pic
+//      		zhangdan4_pic :zhangdan4_pic,
+//      		zhangdan5_pic :zhangdan5_pic,
+//      		zhangdan6_pic :zhangdan6_pic,
+//      		zhangdan7_pic :zhangdan7_pic
         		
         	},
         	dataType : 'json',
